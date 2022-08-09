@@ -1,14 +1,14 @@
-require("nvim-lsp-installer").setup({
-    automatic_installation = true, 
-    -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+require('mason').setup({
     ui = {
         icons = {
-            server_installed = "✓",
-            server_pending = "➜",
-            server_uninstalled = "✗"
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
         }
     }
 })
+
+require('mason-lspconfig').setup()
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -48,12 +48,11 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
-require('lspconfig')['pyright'].setup{
+require('lspconfig')['pyright'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
 }
-require('lspconfig')['jdtls'].setup{
+require('lspconfig')['jdtls'].setup {
     on_attach = on_attach,
     flags = lsp_flags,
 }
-

@@ -60,14 +60,19 @@ return require('packer').startup(function(use)
       'windwp/nvim-autopairs',
     config = get_config('nvim-autopairs')
   }
-  -- LSP Plugins
+
+-- LSP Plugins
   use {
     'neovim/nvim-lspconfig',
-    config = get_config('lsp'),
+    config = get_config('lsp-config'),
   }
   use {
-    'williamboman/nvim-lsp-installer',
-    config = get_config('lsp'),
+    'williamboman/mason.nvim',
+    config = get_config('lsp-config'),
+  }
+  use {
+      'williamboman/mason-lspconfig.nvim',
+      config = get_config('lsp-config'),
   }
   use { 'L3MON4D3/LuaSnip' }
   use { 'saadparwaiz1/cmp_luasnip' }
