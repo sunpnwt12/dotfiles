@@ -1,7 +1,7 @@
 # dotfiles
 This is my repotory for managing dotfiles
 Neovim is my preferred vim variant
-Fish shell over Zsh for simplicity, though I also liked Zsh.
+Fish shell over Zsh for simplicity though I also liked Zsh.
 Tmux for better multitasking.
 
 all of this tools were themed dracula.
