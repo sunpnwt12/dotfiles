@@ -3,7 +3,7 @@
 -- returns the require for use in `config` parameter of packer's use
 -- expects the name of the config file
 local function get_config(name)
-    return string.format('require("config/%s")', name)
+    return string.format('require('config/%s')', name)
 end
 
 return require('packer').startup(function(use)
@@ -24,6 +24,34 @@ return require('packer').startup(function(use)
         'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
         config = function() require('gitsigns').setup() end
     }
+
+    -- LSP Plugins
+    use {
+        'neovim/nvim-lspconfig',
+        config = get_config('lsp-config'),
+    }
+    use {
+        'williamboman/mason.nvim',
+        config = get_config('lsp-config'),
+    }
+    use {
+        'williamboman/mason-lspconfig.nvim',
+        config = get_config('lsp-config'),
+    }
+    use { 'L3MON4D3/LuaSnip' }
+    use { 'saadparwaiz1/cmp_luasnip' }
+    use {
+        'hrsh7th/nvim-cmp',
+        config = get_config('cmp')
+    }
+    use { 'hrsh7th/cmp-nvim-lsp' }
+
+    use {
+        'folke/trouble.nvim',
+        require = 'kyazdani42/nvim-web-devicons',
+        config = get_config('trouble')
+    }
+
 
     -- My Plugins
     use {
@@ -52,43 +80,28 @@ return require('packer').startup(function(use)
 
     use {
         'akinsho/bufferline.nvim',
-        tag = "v2.*",
+        tag = 'v2.*',
         config = get_config('bufferline'),
         requires = 'kyazdani42/nvim-web-devicons'
     }
 
-    use "lukas-reineke/indent-blankline.nvim"
+    use 'lukas-reineke/indent-blankline.nvim'
 
     use {
         'windwp/nvim-autopairs',
         config = get_config('nvim-autopairs')
     }
 
-    -- LSP Plugins
     use {
-        'neovim/nvim-lspconfig',
-        config = get_config('lsp-config'),
+        'kylechui/nvim-surround',
+        tag = '*',
+        config = get_config('nvim-surround')
     }
-    use {
-        'williamboman/mason.nvim',
-        config = get_config('lsp-config'),
-    }
-    use {
-        'williamboman/mason-lspconfig.nvim',
-        config = get_config('lsp-config'),
-    }
-    use { 'L3MON4D3/LuaSnip' }
-    use { 'saadparwaiz1/cmp_luasnip' }
-    use {
-        'hrsh7th/nvim-cmp',
-        config = get_config('cmp')
-    }
-    use { 'hrsh7th/cmp-nvim-lsp' }
+
 
     use {
-        'folke/trouble.nvim',
-        require = 'kyazdani42/nvim-web-devicons',
-        config = get_config('trouble')
+        'numToStr/Comment.nvim',
+        config = get_config('Comment')
     }
 
 end)
