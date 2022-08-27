@@ -39,7 +39,7 @@ all of this tools were themed dracula.
 
 
 ## Shell Setup
-- [fish shell](https://github.com/fish-shell/fish-shell)
+- [fish shell - 3.5.1](https://github.com/fish-shell/fish-shell)
 - [jorgebucaran/fisher](https://github.com/jorgebucaran/fisher)
 - [ilancosman/tide@v5](https://github.com/ilancosman/tide@v5)
 - [jethrokuan/z](https://github.com/jethrokuan/z)
