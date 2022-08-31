@@ -13,7 +13,6 @@ opt.shiftwidth = 4
 opt.shiftwidth = 4
 opt.autoindent = true
 
-opt.hlsearch = true
 opt.incsearch = true
 opt.ignorecase = true
 opt.smartcase = true

@@ -1,9 +1,5 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- returns the require for use in `config` parameter of packer's use
--- expects the name of the config file
 local function get_config(name)
-    return string.format('require('config/%s')', name)
+    return string.format('require("config/%s")', name)
 end
 
 return require('packer').startup(function(use)
@@ -80,12 +76,12 @@ return require('packer').startup(function(use)
 
     use {
         'akinsho/bufferline.nvim',
-        tag = 'v2.*',
+        tag = "v2.*",
         config = get_config('bufferline'),
         requires = 'kyazdani42/nvim-web-devicons'
     }
 
-    use 'lukas-reineke/indent-blankline.nvim'
+    use "lukas-reineke/indent-blankline.nvim"
 
     use {
         'windwp/nvim-autopairs',
@@ -93,11 +89,10 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'kylechui/nvim-surround',
-        tag = '*',
+        "kylechui/nvim-surround",
+        tag = "*",
         config = get_config('nvim-surround')
     }
-
 
     use {
         'numToStr/Comment.nvim',
