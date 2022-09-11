@@ -64,8 +64,10 @@ return require('packer').startup(function(use)
         config = get_config('telescope')
     }
 
-    use { 'Mofiqul/dracula.nvim',
-        config = get_config('dracula')
+    use {
+        'catppuccin/nvim',
+        as = 'catppuccin',
+        config = get_config('catppuccin')
     }
 
     use {

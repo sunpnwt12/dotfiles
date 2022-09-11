@@ -3,4 +3,4 @@ require('mappings')
 require('options')
 require('autocmd')
 
-vim.cmd[[colorscheme dracula]]
+vim.cmd[[colorscheme catppuccin]]

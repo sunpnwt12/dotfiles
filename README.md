@@ -4,7 +4,7 @@ This is my repository for managing dotfiles.
 **Fish** shell with Fisher over Zsh for simplicity though I still liked Zsh.  
 **Tmux** for better multitasking.
 
-all of this tools were themed dracula.
+All of these tools are themed with (catppuccin)[https://github.com/catppuccin/catppuccin]
 (This configuration is installed on WSL2 Ubuntu 22.02 LTS)
 ## Neovim Setup
 [Neovim](https://github.com/neovim/neovim) >= 0.7
@@ -25,7 +25,7 @@ all of this tools were themed dracula.
 - [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 - [kylechui/nvim-surround](https://github.com/kylechui/nvim-surround)
 - [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim)
-- [Mofiqul/dracula.nvim](https://github.com/Mofiqul/dracula.nvim)
+- [catpuccin/nvim](https://github.com/catppuccin/nvim)
 
 ### LSP Plugins
 - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
@@ -44,11 +44,11 @@ all of this tools were themed dracula.
 - [ilancosman/tide@v5](https://github.com/ilancosman/tide@v5)
 - [jethrokuan/z](https://github.com/jethrokuan/z)
 - [patrickf1/fzf.fish](https://github.com/patrickf1/fzf.fish)
-- [dracula/fish](https://github.com/dracula/fish)
+- [catppuccin/fish](https://github.com/catppuccin/fish)
 
 ## Tmux Setup
+- [catppuccin/tmux](https://github.com/catppuccin/tmux) (manually installed)
 - [tmux-plugins/tpm](https://github.com/tmux-plugins/tpm)
 - [tmux-plugins/tmux-sensible](https://github.com/tmux-plugins/tmux-sensible)
 - [b0o/tmux-autoreload](https://github.com/b0o/tmux-autoreload)
-- [dracula/tmux](https://github.com/dracula/tmux)
 
