@@ -4,7 +4,7 @@ This is my repository for managing dotfiles.
 **Fish** shell with Fisher over Zsh for simplicity though I still liked Zsh.  
 **Tmux** for better multitasking.
 
-All of these tools are themed with (catppuccin)[https://github.com/catppuccin/catppuccin]
+All of these tools are themed with [catppuccin]( https://github.com/catppuccin/catppuccin )
 (This configuration is installed on WSL2 Ubuntu 22.02 LTS)
 ## Neovim Setup
 [Neovim](https://github.com/neovim/neovim) >= 0.7
