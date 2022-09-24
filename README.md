@@ -39,9 +39,9 @@ All of these tools are themed with [catppuccin]( https://github.com/catppuccin/c
 
 
 ## Shell Setup
+Prompt -> [Starship](https://github.com/starship/starship)
 - [fish shell - 3.5.1](https://github.com/fish-shell/fish-shell)
 - [jorgebucaran/fisher](https://github.com/jorgebucaran/fisher)
-- [ilancosman/tide@v5](https://github.com/ilancosman/tide@v5)
 - [jethrokuan/z](https://github.com/jethrokuan/z)
 - [patrickf1/fzf.fish](https://github.com/patrickf1/fzf.fish)
 - [catppuccin/fish](https://github.com/catppuccin/fish)
