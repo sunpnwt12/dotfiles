@@ -20,7 +20,7 @@ end
 -- language setup
 --
 local lspconfig = require('lspconfig')
-local servers = { 'pyright', 'jdtls', 'sumneko_lua', 'rust_analyzer', 'tsserver', 'svelte', 'tailwindcss' }
+local servers = { 'pyright', 'jdtls', 'lua_ls', 'rust_analyzer', 'tsserver', 'svelte', 'tailwindcss' }
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {

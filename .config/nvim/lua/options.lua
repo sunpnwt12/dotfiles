@@ -10,7 +10,6 @@ opt.relativenumber = true
 opt.expandtab = true
 opt.smarttab = true
 opt.shiftwidth = 4
-opt.shiftwidth = 4
 opt.autoindent = true
 
 opt.incsearch = true

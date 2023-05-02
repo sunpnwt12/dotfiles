@@ -1,12 +1,11 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
+set fish_greeting
 
-alias ll="exa -la"
-alias fd="fdfind"
-alias bat="batcat" 
+alias ls="exa -la"
 alias lg="lazygit"
 alias nv="nvim"
 alias ipy="ipython3" 
 
-set -x JAVA_HOME "/usr/lib/jvm/java-1.17.0-openjdk-amd64"
+starship init fish | source

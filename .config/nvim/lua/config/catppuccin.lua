@@ -32,7 +32,6 @@ require("catppuccin").setup({
         cmp = true,
         gitsigns = true,
         telescope = true,
-        trouble = true,
         nvimtree = true,
         indent_blankline = {
             enabled = true,

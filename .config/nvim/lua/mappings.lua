@@ -16,6 +16,17 @@ vim.g.mapleader = ","
 -- yank the rest of the line
 map('n', 'Y', 'y$', defaults_opts)
 
+-- mapping copy-paste from/to copyboard
+map('v', '<leader>y', '"+y', defaults_opts)
+map('n', '<leader>Y', '"+yg_', defaults_opts)
+map('n', '<leader>y', '"+y', defaults_opts)
+map('n', '<leader>yy', '"+yy', defaults_opts)
+
+map('n', '<leader>p', '"+p', defaults_opts)
+map('v', '<leader>p', '"+p', defaults_opts)
+map('n', '<leader>P', '"+P', defaults_opts)
+map('v', '<leader>P', '"+P', defaults_opts)
+
 --moving lines
 map('n', '<a-j>', '<cmd>m .+1<cr>==', defaults_opts)
 map('v', '<a-j>', '<cmd>m \'>+1<cr>gv=gv', defaults_opts)
