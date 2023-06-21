@@ -6,12 +6,12 @@ This is my repository for managing dotfiles.
 
 All of these tools are themed with [catppuccin]( https://github.com/catppuccin/catppuccin )
 (This configuration is installed on WSL2 Ubuntu 22.02 LTS)
-## Neovim Setup
-[Neovim](https://github.com/neovim/neovim) >= 0.7
 
-- [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim)
-- [andymass/vim-matchup](https://github.com/andymass/vim-matchup)
-- [w0rp/ale](https://github.com/w0rp/ale)
+Plugins manager -> [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
+
+## Neovim Setup
+[Neovim](https://github.com/neovim/neovim) >= 0.8
+
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
