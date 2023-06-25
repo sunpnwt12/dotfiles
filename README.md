@@ -13,7 +13,7 @@ Plugins manager -> [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
 [Neovim](https://github.com/neovim/neovim) >= 0.8
 
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [lewis6991/gitsigns.nvim](https://github.com/tpope/vim-fugitive)
 - [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 
 - [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
@@ -31,11 +31,15 @@ Plugins manager -> [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
 - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
 - [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
-- [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)
-- [saadparwaiz1/cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
 - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [hrsh7th/cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+- [hrsh7th/cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+- [hrsh7th/cmp-path](https://github.com/hrsh7th/cmp-path)
+- [hrsh7th/cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua)
+- [saadparwaiz1/cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+- [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - [folke/trouble.nvim](https://github.com/folke/trouble.nvim)
+- [rafamadriz/friendly-snippets](https://github.com/folke/rafamadriz/friendly-snippets)
 
 
 ## Shell Setup
