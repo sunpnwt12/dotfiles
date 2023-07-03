@@ -10,7 +10,7 @@ All of these tools are themed with [catppuccin]( https://github.com/catppuccin/c
 Plugins manager -> [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ## Neovim Setup
-[Neovim](https://github.com/neovim/neovim) >= 0.8
+[Neovim](https://github.com/neovim/neovim) >= 0.9
 
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [lewis6991/gitsigns.nvim](https://github.com/tpope/vim-fugitive)
@@ -44,11 +44,12 @@ Plugins manager -> [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ## Shell Setup
 Prompt -> [Starship](https://github.com/starship/starship)
-- [fish shell - 3.5.1](https://github.com/fish-shell/fish-shell)
+- [fish shell](https://github.com/fish-shell/fish-shell)
 - [jorgebucaran/fisher](https://github.com/jorgebucaran/fisher)
 - [jethrokuan/z](https://github.com/jethrokuan/z)
 - [patrickf1/fzf.fish](https://github.com/patrickf1/fzf.fish)
 - [catppuccin/fish](https://github.com/catppuccin/fish)
+- [edc/bass](https://github.com/edc/bass)
 
 ## Tmux Setup
 - [catppuccin/tmux](https://github.com/catppuccin/tmux) (manually installed)
