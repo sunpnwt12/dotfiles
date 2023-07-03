@@ -2,7 +2,7 @@ local mocha = require('catppuccin.palettes').get_palette "mocha"
 
 
 require("catppuccin").setup({
-    transparent_background = true,
+    transparent_background = false,
     term_colors = false,
     compile = {
         enabled = false,

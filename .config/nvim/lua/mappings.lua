@@ -42,6 +42,7 @@ map('n', '<leader>ff', '<cmd>Telescope find_files find_command=rg,--ignore,--hid
 map('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', defaults_opts)
 map('n', '<leader>fr', '<cmd>Telescope oldfiles<CR>', defaults_opts)
 map('n', '<C-p>', '<cmd>Telescope git_files<CR>', defaults_opts)
+map('n', '<leader>fb', '<cmd>Telescope file_browser<CR>', defaults_opts)
 
 -- nvim-tree
 map('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', defaults_opts)

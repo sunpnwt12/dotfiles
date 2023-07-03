@@ -63,7 +63,10 @@ local plugins = {
     version = '0.1.0',
     dependencies = { { 'nvim-lua/plenary.nvim' } },
 },
-{ 'nvim-telescope/telescope-file-browser.nvim' },
+{
+    "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+},
 
 -- BufferLine
 {
@@ -77,8 +80,7 @@ local plugins = {
 },
 
 -- Git
--- {'ewis6991/gitsigns.nvim'},
-{'tpope/vim-fugitive'},
+{'lewis6991/gitsigns.nvim'},
 
 -- Utilities
 'lukas-reineke/indent-blankline.nvim',
