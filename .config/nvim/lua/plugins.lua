@@ -21,75 +21,62 @@ local plugins = {
 
     -- LSP 
     {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
+        "williamboman/mason.nvim",
+        build = ":MasonUpdate" -- :MasonUpdate updates registry contents
+    },
+    {'williamboman/mason-lspconfig.nvim'},
+    {'neovim/nvim-lspconfig'},
+
+    -- Autocompletion
+    {'hrsh7th/nvim-cmp'},         -- Required
+    {'hrsh7th/cmp-nvim-lsp'},     -- Required
+    {'hrsh7th/cmp-buffer'},       -- Optional
+    {'hrsh7th/cmp-path'},         -- Optional
+    {'hrsh7th/cmp-nvim-lua'},     -- Optional
+    {"folke/trouble.nvim"},
+
+    -- Formatter & Diagnostics
+    {'jose-elias-alvarez/null-ls.nvim'},
+
+    -- DAP
+    -- {'mfussenegger/nvim-dap'},
+    -- {'rcarriga/nvim-dap-ui'},
+
+    -- Tree
+    {
+        'kyazdani42/nvim-tree.lua',
         dependencies = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
-            'williamboman/mason.nvim',
-            build = function()
-                pcall(vim.cmd, 'MasonUpdate')
-            end,
-        },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            'kyazdani42/nvim-web-devicons' -- optional, for file icons
+        }
+    },
 
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},         -- Required
-        {'hrsh7th/cmp-nvim-lsp'},     -- Required
-        {'hrsh7th/cmp-buffer'},       -- Optional
-        {'hrsh7th/cmp-path'},         -- Optional
-        {'saadparwaiz1/cmp_luasnip'}, -- Optional
-        {'hrsh7th/cmp-nvim-lua'},     -- Optional
+    -- Telescope
+    {
+        'nvim-telescope/telescope.nvim',
+        version = '0.1.2',
+        dependencies = { { 'nvim-lua/plenary.nvim' } },
+    },
+    -- BufferLine
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'kyazdani42/nvim-web-devicons', opt = true }
+    },
+    {
+        'akinsho/bufferline.nvim', version = "*"
+    },
 
-        -- Snippets
-        {'L3MON4D3/LuaSnip'},             -- Required
-        {'rafamadriz/friendly-snippets'}, -- Optional
-    }
-},
-{"folke/trouble.nvim"},
+    -- Git
+    {'lewis6991/gitsigns.nvim'},
 
--- Tree
-{
-    'kyazdani42/nvim-tree.lua',
-    dependencies = {
-        'kyazdani42/nvim-web-devicons' -- optional, for file icons
-    }
-},
-
--- Telescope
-{
-    'nvim-telescope/telescope.nvim',
-    version = '0.1.0',
-    dependencies = { { 'nvim-lua/plenary.nvim' } },
-},
-{
-    "nvim-telescope/telescope-file-browser.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-},
-
--- BufferLine
-{
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'kyazdani42/nvim-web-devicons', opt = true }
-},
-{
-    'akinsho/bufferline.nvim',
-    version = 'v2.*',
-    dependencies = 'kyazdani42/nvim-web-devicons'
-},
-
--- Git
-{'lewis6991/gitsigns.nvim'},
-
--- Utilities
-'lukas-reineke/indent-blankline.nvim',
-{ 'windwp/nvim-autopairs',},
-{
-    'kylechui/nvim-surround',
-    version = '*',
-},
-{ 'numToStr/Comment.nvim'},
+    -- Utilities
+    'lukas-reineke/indent-blankline.nvim',
+    { 'windwp/nvim-autopairs',},
+    {
+        'kylechui/nvim-surround',
+        version = '*',
+    },
+    {'numToStr/Comment.nvim'},
+    {'stevearc/oil.nvim'},
 }
 
 local opts = {}

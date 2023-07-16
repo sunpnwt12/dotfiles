@@ -39,10 +39,13 @@ map('v', '<A-k>', '<cmd>m \'<-2<CR>gv=gv', defaults_opts)
 
 -- telescope
 map('n', '<leader>ff', '<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>', defaults_opts)
+map('n', '<leader>fb', '<cmd>Telescope buffers<CR>', defaults_opts)
 map('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', defaults_opts)
 map('n', '<leader>fr', '<cmd>Telescope oldfiles<CR>', defaults_opts)
 map('n', '<C-p>', '<cmd>Telescope git_files<CR>', defaults_opts)
-map('n', '<leader>fb', '<cmd>Telescope file_browser<CR>', defaults_opts)
+
+-- oil
+map("n", "-", require("oil").open, { desc = "Open parent directory" })
 
 -- nvim-tree
 map('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', defaults_opts)
