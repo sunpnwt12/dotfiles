@@ -3,7 +3,15 @@ if status is-interactive
 end
 set fish_greeting
 
-alias ls="exa -la"
+function nvm
+    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end
+
+function cs
+    curl cheat.sh/$argv[1]/$argv[2]
+end
+
+alias ls="exa -la --icons"
 alias lg="lazygit"
 alias nv="nvim"
 alias ipy="ipython3" 
