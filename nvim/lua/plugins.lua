@@ -68,6 +68,7 @@ local plugins = {
 		version = "0.1.2",
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 	},
+	{ "ThePrimeagen/harpoon" },
 	-- BufferLine
 	{
 		"akinsho/bufferline.nvim",
@@ -88,7 +89,6 @@ local plugins = {
 		version = "*",
 	},
 	{ "numToStr/Comment.nvim" },
-	{ "stevearc/oil.nvim" },
 	{ "numToStr/Navigator.nvim" },
 }
 

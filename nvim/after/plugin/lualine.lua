@@ -2,8 +2,8 @@ require("lualine").setup({
 	options = {
 		icons_enabled = true,
 		theme = "catppuccin",
-		section_separators = { left = "", right = "" },
-		-- component_separators = { left = '', right = '' },
+		-- section_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
 		component_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			statusline = {},
@@ -24,7 +24,7 @@ require("lualine").setup({
 		lualine_c = {
 			{
 				"filename",
-				path = 3,
+				path = 1,
 			},
 		},
 		lualine_x = { "encoding", "filetype" },
