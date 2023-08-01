@@ -22,12 +22,34 @@ require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = {
 		-- Replace these with whatever servers you want to install
-		"rust_analyzer",
-		"pyright",
-		"tsserver",
 		"lua_ls",
+		"pyright",
+		"rust_analyzer",
+		"tsserver",
 		"marksman",
 	},
+})
+
+-- Automatically install third-party tools
+require("mason-tool-installer").setup({
+
+	-- a list of all tools you want to ensure are installed upon
+	-- start; they should be the names Mason uses for each tool
+	ensure_installed = {
+		-- DAP
+		"debugpy",
+		"codelldb",
+
+		-- Formater
+		"stylua",
+		"black",
+		"eslint",
+		"markdownlint",
+	},
+	auto_update = false,
+	run_on_start = true,
+	start_delay = 3000, -- 3 second delay
+	debounce_hours = 5, -- at least 5 hours between attempts to install/update
 })
 
 local lspconfig = require("lspconfig")
@@ -48,5 +70,15 @@ lspconfig.lua_ls.setup({
 				globals = { "vim" },
 			},
 		},
+	},
+})
+
+lspconfig.rust_analyzer.setup({
+	capabilities = lsp_capabilities,
+	cmp = {
+		"rustup",
+		"run",
+		"stable",
+		"rust_analyzer",
 	},
 })

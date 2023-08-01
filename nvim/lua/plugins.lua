@@ -25,6 +25,7 @@ local plugins = {
 		build = ":MasonUpdate", -- :MasonUpdate updates registry contents
 	},
 	{ "williamboman/mason-lspconfig.nvim" },
+	{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
 	{ "neovim/nvim-lspconfig" },
 
 	-- Autocompletion
@@ -50,9 +51,10 @@ local plugins = {
 	{ "folke/trouble.nvim" },
 
 	-- DAP
-	{ "rcarriga/nvim-dap-ui" },
 	{ "mfussenegger/nvim-dap" },
+	{ "rcarriga/nvim-dap-ui" },
 	{ "mfussenegger/nvim-dap-python" },
+	{ "simrat39/rust-tools.nvim" },
 
 	-- Tree
 	{

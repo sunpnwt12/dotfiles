@@ -16,16 +16,9 @@ vim.g.mapleader = ","
 -- yank the rest of the line
 map("n", "Y", "y$", defaults_opts)
 
--- Resizing window
-map("n", "<C-Left>", "<CMD>vertical resize +3<CR>", defaults_opts)
-map("n", "<C-Right>", "<CMD>vertical resize -3<CR>", defaults_opts)
-map("n", "<C-Up>", "<CMD>resize +3<CR>", defaults_opts)
-map("n", "<C-Down>", "<CMD>resize -3<CR>", defaults_opts)
-
--- Mason and Lazy shortcut
-map("n", "<leader>ms", "<CMD>Mason<CR>", defaults_opts)
-map("n", "<leader>lz", "<CMD>Lazy<CR>", defaults_opts)
-map("n", "<leader>li", "<CMD>LspInfo<CR>", defaults_opts)
+-- blackhole paste, delete
+map("x", "<leader>p", '"_dP', defaults_opts)
+map({ "n", "v" }, "<leader>d", '"_d', defaults_opts)
 
 -- mapping copy-paste from/to copyboard
 -- map('v', '<leader>y', '"+y', defaults_opts)
@@ -36,6 +29,17 @@ map("n", "<leader>li", "<CMD>LspInfo<CR>", defaults_opts)
 -- map('v', '<leader>p', '"+p', defaults_opts)
 -- map('n', '<leader>P', '"+P', defaults_opts)
 -- map('v', '<leader>P', '"+P', defaults_opts)
+
+-- Resizing window
+map("n", "<C-Left>", "<CMD>vertical resize +3<CR>", defaults_opts)
+map("n", "<C-Right>", "<CMD>vertical resize -3<CR>", defaults_opts)
+map("n", "<C-Up>", "<CMD>resize +3<CR>", defaults_opts)
+map("n", "<C-Down>", "<CMD>resize -3<CR>", defaults_opts)
+
+-- Mason and Lazy shortcut
+map("n", "<leader>ms", "<CMD>Mason<CR>", defaults_opts)
+map("n", "<leader>lz", "<CMD>Lazy<CR>", defaults_opts)
+map("n", "<leader>li", "<CMD>LspInfo<CR>", defaults_opts)
 
 --moving lines
 -- map("n", "<a-j>", "<CMD>m .+1<cr>==", defaults_opts)
@@ -51,8 +55,10 @@ map("n", "<leader>fc", "<CMD>Telescope current_buffer_fuzzy_find<CR>", defaults_
 map("n", "<leader>fg", "<CMD>Telescope live_grep<CR>", defaults_opts)
 map("n", "<leader>fr", "<CMD>Telescope oldfiles<CR>", defaults_opts)
 -- harpoon
-map("n", "<leader>m", "<CMD>lua require('harpoon.mark').add_file()<CR>", defaults_opts)
+map("n", "<leader>a", "<CMD>lua require('harpoon.mark').add_file()<CR>", defaults_opts)
 map("n", "<leader>h", "<CMD>lua require('harpoon.ui').toggle_quick_menu()<CR>", defaults_opts)
+-- map("n", "<leader>", "<CMD>lua require('harpoon.ui').nav_next()<CR>", defaults_opts)
+-- map("n", "<leader>", "<CMD>lua require('harpoon.ui').nav_prev()<CR>", defaults_opts)
 
 -- nvim-tree
 map("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", defaults_opts)
@@ -77,19 +83,9 @@ map("n", "<F8>", "<CMD>lua require'dap'.step_out()<CR>", defaults_opts)
 map("n", "<S-F5>", "<CMD>lua require('dap').restart()<CR>", defaults_opts)
 map("n", "<C-S-F5>", "<CMD>lua require('dap').terminate()<CR>", defaults_opts)
 map("n", "<leader>b", "<CMD>lua require('dap').toggle_breakpoint()<CR>", defaults_opts)
-map(
-	"n",
-	"<leader>B",
-	"<CMD>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
-	defaults_opts
-)
-map(
-	"n",
-	"<leader>lp",
-	"<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point messages: '))<CR>",
-	defaults_opts
-)
-map("n", "<leader>dr", "<CMD>lua require('dap').repl.open()<CR>", defaults_opts)
+map("n", "<leader>B", "<CMD>lua require('dap').set_breakpoint(vim.fn.input('BP Cond: '))<CR>", defaults_opts)
+map("n", "<leader>lp", "<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('LP Msg: '))<CR>", defaults_opts)
+-- map("n", "<leader>dr", "<CMD>lua require('dap').repl.open()<CR>", defaults_opts)
 
 -- Navigator.nvim with tmux
 map({ "n", "t" }, "<A-h>", "<CMD>lua require('Navigator').left()<CR>", defaults_opts)
