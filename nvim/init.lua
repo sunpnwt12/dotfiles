@@ -1,6 +1,4 @@
-require("options")
-require("plugins")
-require("mappings")
-require("autocmd")
-
-vim.cmd([[colorscheme catppuccin]])
+require("config.options")
+require("config.lazy")
+require("config.autocmds")
+require("config.mappings")

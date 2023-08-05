@@ -1,4 +1,4 @@
-require("telescope").setup({
+local opts = {
 	extensions = {
 		hijack_netrw = true,
 	},
@@ -12,6 +12,12 @@ require("telescope").setup({
 			},
 		},
 	},
-})
+}
 
-require("telescope").load_extension("harpoon")
+return {
+	"nvim-telescope/telescope.nvim",
+	opts = opts,
+	version = "0.1.2",
+	cmd = "Telescope",
+	dependencies = { { "nvim-lua/plenary.nvim" } },
+}

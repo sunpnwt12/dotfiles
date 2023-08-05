@@ -1,4 +1,4 @@
-require("lualine").setup({
+local opts = {
 	options = {
 		icons_enabled = true,
 		theme = "catppuccin",
@@ -46,8 +46,13 @@ require("lualine").setup({
 		-- lualine_c = {},
 		-- lualine_x = {},
 		-- lualine_y = {},
-		-- lualine_z = {'filename'}
+		-- lualine_z = { "filename" },
 	},
 	inactive_winbar = {},
 	extensions = {},
-})
+}
+
+return {
+	"nvim-lualine/lualine.nvim",
+	opts = opts,
+}
