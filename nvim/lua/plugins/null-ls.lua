@@ -1,29 +1,32 @@
 local config = function()
-	local null_ls = require("null-ls")
-	local formatting = null_ls.builtins.formatting
+    local null_ls = require("null-ls")
+    local formatting = null_ls.builtins.formatting
 
-	null_ls.setup({
-		sources = {
-			-- lua
-			formatting.stylua,
+    null_ls.setup({
+        sources = {
+            -- lua
+            formatting.stylua,
 
-			-- python
-			formatting.black,
+            -- python
+            formatting.black,
 
-			-- rust
-			formatting.rustfmt,
+            -- rust
+            formatting.rustfmt,
 
-			-- ts/js
-			formatting.eslint,
+            -- ts/js
+            formatting.eslint_d,
 
-			-- markdown
-			formatting.markdownlint,
-		},
-	})
+            -- markdown
+            formatting.markdownlint,
+
+            -- latex
+            formatting.latexindent,
+        },
+    })
 end
 
 return {
-	"jose-elias-alvarez/null-ls.nvim",
-	config = config,
-	event = "BufReadPre",
+    "jose-elias-alvarez/null-ls.nvim",
+    config = config,
+    event = "BufReadPre",
 }

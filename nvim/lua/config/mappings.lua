@@ -48,21 +48,22 @@ map("n", "<leader>li", "<CMD>LspInfo<CR>", defaults_opts)
 
 -- telescope
 map("n", "<leader>ff", "<CMD>Telescope find_files<CR>", defaults_opts)
-map("n", "<leader>fb", "<CMD>Telescope buffers<CR>", defaults_opts)
 map("n", "<leader>fk", "<CMD>Telescope keymaps<CR>", defaults_opts)
+map("n", "<leader>fb", "<CMD>Telescope buffers<CR>", defaults_opts)
 map("n", "<leader>fc", "<CMD>Telescope current_buffer_fuzzy_find<CR>", defaults_opts)
 map("n", "<leader>fg", "<CMD>Telescope live_grep<CR>", defaults_opts)
 map("n", "<leader>fr", "<CMD>Telescope oldfiles<CR>", defaults_opts)
-
--- nvim-tree
-map("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", defaults_opts)
+-- telescope-zoxide
+map("n", "<leader>fz", "<CMD>Telescope zoxide list<CR>", defaults_opts)
 
 -- oil
-map("n", "<leader>o", "<CMD>Oil<CR>", defaults_opts)
+map("n", "<leader>o", "<CMD>lua require('oil').open()<CR>", defaults_opts)
 
 -- bufferline
 map("n", "<S-l>", "<CMD>BufferLineCycleNext<CR>", defaults_opts)
 map("n", "<S-h>", "<CMD>BufferLineCyclePrev<CR>", defaults_opts)
+-- map("n", "", "<CMD>BufferLineMoveNext<CR>", defaults_opts)
+-- map("n", "", "<CMD>BufferLineMovePrev<CR>", defaults_opts)
 
 -- trouble
 map("n", "<leader>xx", "<CMD>Trouble<CR>", defaults_opts)

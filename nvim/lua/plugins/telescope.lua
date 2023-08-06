@@ -1,23 +1,31 @@
-local opts = {
-	extensions = {
-		hijack_netrw = true,
-	},
-	pickers = {
-		find_files = {
-			find_command = {
-				"rg",
-				"--ignore",
-				"--hidden",
-				"--files",
+local config = function()
+	local telescope = require("telescope")
+	telescope.setup({
+		extensions = {
+			hijack_netrw = true,
+		},
+
+		pickers = {
+			find_files = {
+				find_command = {
+					"rg",
+					"--ignore",
+					"--hidden",
+					"--files",
+					"--glob",
+					"!**/.git/*",
+				},
 			},
 		},
-	},
-}
+	})
+end
 
 return {
 	"nvim-telescope/telescope.nvim",
-	opts = opts,
+	config = config,
 	version = "0.1.2",
 	cmd = "Telescope",
-	dependencies = { { "nvim-lua/plenary.nvim" } },
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+	},
 }
