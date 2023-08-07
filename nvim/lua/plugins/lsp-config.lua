@@ -1,9 +1,9 @@
+-- :h lspconifg-all (for all list and configurations of servers)
 local mason_opts = {
     ui = {
         border = "rounded",
     },
 }
-
 local mason_lsp_opts = {
     ensure_installed = {
         -- Replace these with whatever servers you want to install
@@ -11,6 +11,7 @@ local mason_lsp_opts = {
         "pyright",
         "rust_analyzer",
         "tsserver",
+        "svelte",
         "marksman",
         "texlab",
     },
@@ -26,7 +27,7 @@ local mason_tool_installer_opts = {
 
         -- Formater & Linter
         "stylua",
-        "black",
+        "ruff",
         "eslint_d",
         "markdownlint",
         "latexindent",
@@ -41,8 +42,10 @@ local mason_tool_installer_opts = {
 }
 
 local lsp_config_conf = function()
+    require("lspconfig.ui.windows").default_options.border = "rounded"
     local lspconfig = require("lspconfig")
-    local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
     local handlers = {
         -- The first entry (without a key) will be the default handler
@@ -54,24 +57,24 @@ local lsp_config_conf = function()
             })
         end,
         -- Next, you can provide targeted overrides for specific servers.
-        ["rust_analyzer"] = function()
-            lspconfig.rust_analyzer.setup({
-                capabilities = lsp_capabilities,
-                cmp = {
-                    "rustup",
-                    "run",
-                    "stable",
-                    "rust_analyzer",
-                },
-                settings = {
-                    ["rust-analyzer"] = {
-                        checkOnSave = {
-                            command = "clippy",
-                        },
-                    },
-                },
-            })
-        end,
+        -- ["rust_analyzer"] = function()
+        -- 	lspconfig.rust_analyzer.setup({
+        -- 		capabilities = lsp_capabilities,
+        -- 		cmp = {
+        -- 			"rustup",
+        -- 			"run",
+        -- 			"stable",
+        -- 			"rust_analyzer",
+        -- 		},
+        -- 		settings = {
+        -- 			["rust-analyzer"] = {
+        -- 				checkOnSave = {
+        -- 					command = "clippy",
+        -- 				},
+        -- 			},
+        -- 		},
+        -- 	})
+        -- end,
 
         ["lua_ls"] = function()
             lspconfig.lua_ls.setup({

@@ -14,20 +14,24 @@ map("n", "<A-O>", "O<Esc>", defaults_opts)
 -- centered cursor
 map("n", "<C-d>", "<C-d>zz", defaults_opts)
 map("n", "<C-u>", "<C-u>zz", defaults_opts)
-
 -- yank the rest of the line
-map("n", "Y", "y$", defaults_opts)
+map("n", "Y", "yg_", defaults_opts)
 
 -- blackhole paste, delete
 map("x", "<leader>p", '"_dP', defaults_opts)
 map({ "n", "v" }, "<leader>d", '"_d', defaults_opts)
 
 -- mapping copy-paste from/to copyboard
--- map({ "n", "v" }, "<leader>y", '"+y', defaults_opts)
--- map('n', '<leader>Y', '"+yg_', defaults_opts)
--- map('n', '<leader>yy', '"+yy', defaults_opts)
--- map({'n', 'v'}, '<leader>p', '"+p', defaults_opts)
--- map({'n', 'v'}, '<leader>P', '"+P', defaults_opts)
+-- copy from clipboard
+map({ "n", "v" }, "<leader>y", '"+y', defaults_opts)
+map("n", "<leader>Y", '"+yg_', defaults_opts)
+-- map("n", "<leader>yy", '"+yy', defaults_opts)
+-- paste from clipboard
+map({ "n", "v" }, "<leader>p", '"+p', defaults_opts)
+map({ "n", "v" }, "<leader>P", '"+P', defaults_opts)
+
+-- substitute all under cursor in the buffer
+map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Resizing window
 map("n", "<C-Left>", "<CMD>vertical resize +3<CR>", defaults_opts)
@@ -58,6 +62,9 @@ map("n", "<leader>fz", "<CMD>Telescope zoxide list<CR>", defaults_opts)
 
 -- oil
 map("n", "<leader>o", "<CMD>lua require('oil').open()<CR>", defaults_opts)
+
+-- Nvim-tree
+map("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", defaults_opts)
 
 -- bufferline
 map("n", "<S-l>", "<CMD>BufferLineCycleNext<CR>", defaults_opts)

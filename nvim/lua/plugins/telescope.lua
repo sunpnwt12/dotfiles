@@ -3,6 +3,9 @@ local config = function()
 	telescope.setup({
 		extensions = {
 			hijack_netrw = true,
+			zoxide = {
+				prompt_title = "Zoxide",
+			},
 		},
 
 		pickers = {
@@ -18,6 +21,7 @@ local config = function()
 			},
 		},
 	})
+	require("telescope").load_extension("zoxide")
 end
 
 return {
