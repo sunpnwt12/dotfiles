@@ -1,4 +1,5 @@
 # dotfiles
+
 This is my repository for managing dotfiles.  
 **Neovim** is my preferred vim variant.  
 **Fish** shell with Fisher over Zsh for simplicity though I still liked Zsh.  
@@ -10,6 +11,7 @@ All of these tools are themed with [catppuccin]( https://github.com/catppuccin/c
 Plugins manager -> [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ## Neovim Setup
+
 [Neovim](https://github.com/neovim/neovim) >= 0.9
 
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
@@ -29,6 +31,7 @@ Plugins manager -> [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
 - [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim)
 
 ### LSP Plugins
+
 - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [williamboman/mason.nvim](https://github.com/williamboman/mason.nvim)
 - [williamboman/mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
@@ -43,8 +46,8 @@ Plugins manager -> [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
 - [folke/trouble.nvim](https://github.com/folke/trouble.nvim)
 - [jose-elias-alvarez/null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
 
-
 ## Shell Setup
+
 - [Starship](https://github.com/starship/starship)
 - [fish shell](https://github.com/fish-shell/fish-shell)
 - [jorgebucaran/fisher](https://github.com/jorgebucaran/fisher)
@@ -53,11 +56,9 @@ Plugins manager -> [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
 - [edc/bass](https://github.com/edc/bass)
 - [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide)
 
-
 ## Tmux Setup
+
 - [catppuccin/tmux](https://github.com/catppuccin/tmux)
 - [tmux-plugins/tpm](https://github.com/tmux-plugins/tpm)
 - [tmux-plugins/tmux-sensible](https://github.com/tmux-plugins/tmux-sensible)
 - [b0o/tmux-autoreload](https://github.com/b0o/tmux-autoreload)
-        
-

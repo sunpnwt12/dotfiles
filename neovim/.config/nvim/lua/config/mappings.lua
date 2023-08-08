@@ -43,6 +43,7 @@ map("n", "<C-Down>", "<CMD>resize -3<CR>", defaults_opts)
 map("n", "<leader>ms", "<CMD>Mason<CR>", defaults_opts)
 map("n", "<leader>lz", "<CMD>Lazy<CR>", defaults_opts)
 map("n", "<leader>li", "<CMD>LspInfo<CR>", defaults_opts)
+map("n", "<leader>ni", "<CMD>NullLsInfo<CR>", defaults_opts)
 
 --moving lines
 -- map("n", "<a-j>", "<CMD>m .+1<cr>==", defaults_opts)
@@ -61,7 +62,7 @@ map("n", "<leader>fr", "<CMD>Telescope oldfiles<CR>", defaults_opts)
 map("n", "<leader>fz", "<CMD>Telescope zoxide list<CR>", defaults_opts)
 
 -- oil
-map("n", "<leader>o", "<CMD>lua require('oil').open()<CR>", defaults_opts)
+map("n", "<leader>o", "<CMD>require('oil').open()<CR>", defaults_opts)
 
 -- Nvim-tree
 map("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", defaults_opts)
@@ -77,7 +78,10 @@ map("n", "<leader>xx", "<CMD>Trouble<CR>", defaults_opts)
 map("n", "<leader>xw", "<CMD>Trouble workspace_diagnostics<CR>", defaults_opts)
 map("n", "<leader>xd", "<CMD>Trouble document_diagnostics<CR>", defaults_opts)
 map("n", "<leader>xq", "<CMD>Trouble quickfix<CR>", defaults_opts)
-map("n", "gR", "<CMD>Trouble lsp_references<CR>", defaults_opts)
+map("n", "gr", "<CMD>Trouble lsp_references<CR>", defaults_opts)
+
+-- code_runner
+map("n", "<leader>rc", "<CMD>RunCode<CR>", defaults_opts)
 
 -- DAP
 -- map("n", "<leader>dt", "<CMD>lua require('dapui').toggle()<CR>", defaults_opts)
