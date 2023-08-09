@@ -62,7 +62,7 @@ map("n", "<leader>fr", "<CMD>Telescope oldfiles<CR>", defaults_opts)
 map("n", "<leader>fz", "<CMD>Telescope zoxide list<CR>", defaults_opts)
 
 -- oil
-map("n", "<leader>o", "<CMD>require('oil').open()<CR>", defaults_opts)
+map("n", "<leader>o", "<CMD>lua require('oil').open()<CR>", defaults_opts)
 
 -- Nvim-tree
 map("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", defaults_opts)
