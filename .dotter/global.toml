@@ -1,0 +1,17 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+bat = "~/.config/bat"
+fish = "~/.config/fish"
+glamour = "~/.config/glamour"
+glow = "~/.config/glow"
+lazygit = "~/.config/lazygit"
+nvim = "~/.config/nvim"
+ranger = "~/.config/ranger"
+starship = "~/.config"
+tmux = "~"
+
+[default.variables]
