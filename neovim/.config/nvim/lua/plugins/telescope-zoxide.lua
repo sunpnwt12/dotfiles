@@ -1,5 +1,5 @@
 return {
 	"jvgrootveld/telescope-zoxide",
-	cmd = "Telescope zoxide list",
+	cmd = "Telescope",
 	dependencies = "nvim-telescope/telescope.nvim",
 }
