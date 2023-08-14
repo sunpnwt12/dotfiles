@@ -11,7 +11,9 @@ glow = "~/.config/glow"
 lazygit = "~/.config/lazygit"
 nvim = "~/.config/nvim"
 ranger = "~/.config/ranger"
+joshuto = "~/.config/joshuto"
 starship = "~/.config"
+zellij = "~/.config/zellij"
 tmux = "~"
 
 [default.variables]

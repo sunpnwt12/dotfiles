@@ -60,6 +60,8 @@ map("n", "<leader>fg", "<CMD>Telescope live_grep<CR>", defaults_opts)
 map("n", "<leader>fr", "<CMD>Telescope oldfiles<CR>", defaults_opts)
 -- telescope-zoxide
 map("n", "<leader>fz", "<CMD>Telescope zoxide list<CR>", defaults_opts)
+-- telescope-undo
+map("n", "<leader>fu", "<CMD>Telescope undo<CR>", defaults_opts)
 
 -- oil
 map("n", "<leader>o", "<CMD>lua require('oil').open()<CR>", defaults_opts)
@@ -79,9 +81,13 @@ map("n", "<leader>xw", "<CMD>Trouble workspace_diagnostics<CR>", defaults_opts)
 map("n", "<leader>xd", "<CMD>Trouble document_diagnostics<CR>", defaults_opts)
 map("n", "<leader>xq", "<CMD>Trouble quickfix<CR>", defaults_opts)
 map("n", "gr", "<CMD>Trouble lsp_references<CR>", defaults_opts)
+map("n", "<leader>xf", "<cmd>lua vim.diagnostic.open_float()<CR>", defaults_opts)
 
 -- code_runner
 map("n", "<leader>rc", "<CMD>RunCode<CR>", defaults_opts)
+
+-- Neogit
+map("n", "<leader>G", "<CMD>Neogit kind=vsplit<CR>", defaults_opts)
 
 -- DAP
 -- map("n", "<leader>dt", "<CMD>lua require('dapui').toggle()<CR>", defaults_opts)

@@ -15,5 +15,7 @@ end
 return {
 	"CRAG666/code_runner.nvim",
 	config = config,
-	ft = { "python" },
+	keys = {
+		{ "<leader>rc" },
+	},
 }

@@ -34,5 +34,5 @@ end
 return {
     "jose-elias-alvarez/null-ls.nvim",
     config = config,
-    event = "BufReadPre",
+    event = { "LspAttach" },
 }

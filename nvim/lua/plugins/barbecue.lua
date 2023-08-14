@@ -11,7 +11,7 @@ return {
     name = "barbecue",
     opts = opts,
     version = "*",
-    event = "BufReadPre",
+    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
         "SmiteshP/nvim-navic",
         "nvim-tree/nvim-web-devicons", -- optional dependency

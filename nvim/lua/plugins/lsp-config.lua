@@ -1,22 +1,25 @@
 -- :h lspconifg-all (for all list and configurations of servers)
-local default_on_attach = function(_, bufnr) -- client, bufnr
-	-- vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
-	local bufopts = { noremap = true, silent = true, buffer = bufnr }
-	vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", bufopts)
-	vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", bufopts)
-	vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", bufopts)
-	vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", bufopts)
-	vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<CR>", bufopts)
-	-- vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", bufopts) -- use trouble.nvim instead
-	vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", bufopts)
-	vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<CR>", bufopts)
-	vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = false})<CR>", bufopts)
-	vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", bufopts)
-	vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", bufopts)
-	vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", bufopts)
-	-- vim.keymap.set("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", bufopts) -- use trouble.nvim instead
-end
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(ev)
+		local bufopts = { buffer = ev.buf }
+		-- vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
+		vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", bufopts)
+		vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", bufopts)
+		vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", bufopts)
+		vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", bufopts)
+		vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<CR>", bufopts)
+		-- vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", bufopts) -- use trouble.nvim instead
+		vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", bufopts)
+		vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<CR>", bufopts)
+		vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = false})<CR>", bufopts)
+		vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", bufopts)
+		vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", bufopts)
+		vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", bufopts)
+		-- vim.keymap.set("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", bufopts) -- use trouble.nvim instead
+	end,
+})
 
 local mason_opts = {
 	ui = {
@@ -62,6 +65,10 @@ local mason_tool_installer_opts = {
 
 local lsp_config_conf = function()
 	require("lspconfig.ui.windows").default_options.border = "rounded"
+	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+		-- Use a sharp border with `FloatBorder` highlights
+		border = "rounded",
+	})
 	local lspconfig = require("lspconfig")
 	local capabilities = vim.lsp.protocol.make_client_capabilities()
 	local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
@@ -72,7 +79,6 @@ local lsp_config_conf = function()
 		-- a dedicated handler.
 		function(server_name) -- default handler (optional)
 			require("lspconfig")[server_name].setup({
-				on_attach = default_on_attach,
 				capabilities = lsp_capabilities,
 			})
 		end,
@@ -98,7 +104,6 @@ local lsp_config_conf = function()
 
 		["lua_ls"] = function()
 			lspconfig.lua_ls.setup({
-				on_attach = default_on_attach,
 				capabilities = lsp_capabilities,
 				settings = {
 					Lua = {
@@ -146,12 +151,12 @@ return {
 		opts = mason_opts,
 		build = ":MasonUpdate",
 		cmd = "Mason",
-		event = "BufReadPre",
+		event = { "BufReadPre", "BufNewFile" },
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		opts = mason_lsp_opts,
-		event = "BufReadPre",
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = "williamboman/mason.nvim",
 	},
 	{
@@ -163,6 +168,6 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = lsp_config_conf,
-		event = "BufReadPre",
+		event = { "BufReadPre", "BufNewFile" },
 	},
 }
