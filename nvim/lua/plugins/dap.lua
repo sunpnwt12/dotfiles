@@ -52,22 +52,12 @@ return {
 	{
 		"mfussenegger/nvim-dap",
 		config = dap_conf,
-		keys = {
-			{ "<leader>b" },
-			{ "<leader>B" },
-			{ "<leader>lp" },
-		},
-		-- event = "BufReadPre",
+		event = "LspAttach",
 	},
 	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = "mfussenegger/nvim-dap",
-		keys = {
-			{ "<leader>b" },
-			{ "<leader>B" },
-			{ "<leader>lp" },
-		},
-		-- event = "BufReadPre",
+		event = "LspAttach",
 	},
 	{
 		"mfussenegger/nvim-dap-python",

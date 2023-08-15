@@ -58,6 +58,7 @@ map("n", "<leader>fb", "<CMD>Telescope buffers<CR>", defaults_opts)
 map("n", "<leader>fc", "<CMD>Telescope current_buffer_fuzzy_find<CR>", defaults_opts)
 map("n", "<leader>fg", "<CMD>Telescope live_grep<CR>", defaults_opts)
 map("n", "<leader>fr", "<CMD>Telescope oldfiles<CR>", defaults_opts)
+map("n", "<C-p>", "<CMD>silent! Telescope git_files<CR>", defaults_opts)
 -- telescope-zoxide
 map("n", "<leader>fz", "<CMD>Telescope zoxide list<CR>", defaults_opts)
 -- telescope-undo
@@ -98,7 +99,12 @@ map("n", "<F8>", "<CMD>lua require'dap'.step_out()<CR>", defaults_opts)
 map("n", "<F9>", "<CMD>lua require('dap').restart()<CR>", defaults_opts)
 map("n", "<leader>b", "<CMD>lua require('dap').toggle_breakpoint()<CR>", defaults_opts)
 map("n", "<leader>B", "<CMD>lua require('dap').set_breakpoint(vim.fn.input('BP Cond: '))<CR>", defaults_opts)
-map("n", "<leader>lp", "<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('LP Msg: '))<CR>", defaults_opts)
+map(
+	"n",
+	"<leader>lp",
+	"<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('LogP Msg: '))<CR>",
+	defaults_opts
+)
 -- map("n", "<leader>dr", "<CMD>lua require('dap').repl.open()<CR>", defaults_opts)
 
 -- Navigator.nvim with tmux
