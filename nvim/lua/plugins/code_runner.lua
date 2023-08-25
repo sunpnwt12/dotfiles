@@ -5,8 +5,9 @@ local config = function()
 		end,
 		filetype = {
 			python = "python3 -u",
+			rust = "cargo run",
 		},
-		mode = "term",
+		mode = "toggleterm",
 		-- Focus on runner window(only works on toggle, term and tab mode)
 		focus = true,
 	})
@@ -15,7 +16,6 @@ end
 return {
 	"CRAG666/code_runner.nvim",
 	config = config,
-	keys = {
-		{ "<leader>rc" },
-	},
+	cmd = "RunCode",
+	dependencies = "akinsho/toggleterm.nvim",
 }

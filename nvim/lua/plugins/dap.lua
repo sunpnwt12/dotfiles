@@ -48,21 +48,32 @@ local dap_python_conf = function()
 	require("dap-python").setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python")
 end
 
+local trigger_keys = {
+	{ "<leader>b", "<CMD>lua require('dap').toggle_breakpoint()<CR>" },
+	{ "<leader>B", "<CMD>lua require('dap').set_breakpoint(vim.fn.input('Break Point Condition: '))<CR>" },
+	{ "<leader>lp", "<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log Point Msg: '))<CR>" },
+}
+
 return {
 	{
 		"mfussenegger/nvim-dap",
 		config = dap_conf,
-		event = "LspAttach",
+		keys = trigger_keys,
+		-- ft = { "python", "rust" },
+		-- event = "LspAttach",
 	},
 	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = "mfussenegger/nvim-dap",
-		event = "LspAttach",
+		keys = trigger_keys,
+		-- ft = { "python", "rust" },
+		-- event = "LspAttach",
 	},
 	{
 		"mfussenegger/nvim-dap-python",
 		config = dap_python_conf,
-		ft = { "python" },
 		dependencies = "mfussenegger/nvim-dap",
+		keys = trigger_keys,
+		-- ft = { "python" },
 	},
 }

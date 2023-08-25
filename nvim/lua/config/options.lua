@@ -9,7 +9,7 @@ opt.splitright = true
 
 opt.number = true
 opt.relativenumber = true
-opt.cursorline = true
+-- opt.cursorline = true
 
 opt.expandtab = true
 opt.smarttab = true
@@ -27,7 +27,7 @@ opt.hidden = true
 opt.showmatch = true
 
 -- opt.clipboard = "unnamedplus"
-opt.completeopt = "menuone,noselect"
+opt.completeopt = "menuone"
 
 -- opt.mouse = "a"
 
@@ -43,3 +43,4 @@ opt.scrolloff = 8
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

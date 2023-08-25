@@ -27,5 +27,4 @@ return {
 	"akinsho/bufferline.nvim",
 	config = config,
 	version = "*",
-	event = "VeryLazy",
 }

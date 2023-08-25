@@ -22,6 +22,7 @@ local config = function()
 		},
 	})
 	telescope.load_extension("zoxide")
+	telescope.load_extension("session-lens")
 end
 
 return {

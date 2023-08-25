@@ -47,12 +47,12 @@ local opts = {
 		map("n", "<leader>gp", "<CMD>Gitsigns preview_hunk<CR>")
 
 		-- blame
-		map("n", "<leader>gb", '<CMD>lua require"gitsigns".blame_line{full=true}<CR>')
+		map("n", "<leader>gb", '<CMD>lua require("gitsigns").blame_line{full=true}<CR>')
 		map("n", "<leader>tb", "<CMD>Gitsigns toggle_current_line_blame<CR>")
 
-		-- diff
-		map("n", "<leader>gd", "<CMD>Gitsigns diffthis<CR>")
-		map("n", "<leader>gD", '<CMD>lua require("gitsigns").diffthis("~")<CR>')
+		-- diff -- use diffview instead (remap in mapping.lua)
+		-- map("n", "<leader>gd", "<CMD>Gitsigns diffthis<CR>")
+		-- map("n", "<leader>gD", '<CMD>lua require("gitsigns").diffthis("~")<CR>')
 		map("n", "<leader>td", "<CMD>Gitsigns toggle_deleted<CR>")
 
 		-- Text object

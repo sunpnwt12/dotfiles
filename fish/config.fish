@@ -22,10 +22,12 @@ end
 # alias
 alias ls="exa -la --icons"
 alias lg="lazygit"
+alias gitui='gitui -t mocha.ron'
 alias nv="nvim"
 alias ipy="ipython3" 
 # alias mb='mircomamba'
 alias tmux="tmux -u"
+alias jt='joshuto'
 
 set -gx BAT_THEME "Catppuccin-mocha"
 set -gx EDITOR "nvim"
@@ -39,4 +41,5 @@ zoxide init fish | source
 set -gx MAMBA_EXE "/home/sunpnwt/bin/micromamba"
 set -gx MAMBA_ROOT_PREFIX "/home/sunpnwt/micromamba"
 $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
+micromamba activate
 # <<< mamba initialize <<<

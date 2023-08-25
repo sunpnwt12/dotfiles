@@ -17,6 +17,8 @@ local opts = {
         ["~"] = "actions.tcd",
         ["g."] = "actions.toggle_hidden",
     },
+    delete_to_trash = true,
+    trash_command = "trash-put",
 }
 
 return {

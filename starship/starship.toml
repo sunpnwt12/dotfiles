@@ -7,11 +7,19 @@ vimcmd_symbol = "[<](bold green)"
 tag_symbol = " tag "
 
 [git_status]
+conflicted = "="
 ahead = ">"
 behind = "<"
 diverged = "<>"
+modified = "!"
+untracked = "?"
+stashed = "$"
+staged = "+"
 renamed = "r"
 deleted = "x"
+
+[git_metrics]
+disabled = false
 
 [aws]
 symbol = "aws "
