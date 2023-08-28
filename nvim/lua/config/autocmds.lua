@@ -5,3 +5,11 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 	group = format_augroup,
 })
+
+local handle_session_augroup = vim.api.nvim_create_augroup("HandleSessionRestore", { clear = true })
+vim.api.nvim_create_autocmd("DirChanged", {
+	callback = function()
+		vim.cmd("LspRestart")
+	end,
+	group = handle_session_augroup,
+})

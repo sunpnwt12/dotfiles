@@ -109,10 +109,10 @@ map("n", "<F9>", "<CMD>lua require('dap').restart()<CR>", defaults_opts)
 map("n", "<leader>b", "<CMD>lua require('dap').toggle_breakpoint()<CR>", defaults_opts)
 map("n", "<leader>B", "<CMD>lua require('dap').set_breakpoint(vim.fn.input('BreakPointCond: '))<CR>", defaults_opts)
 map(
-    "n",
-    "<leader>lp",
-    "<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('LogPointMsg: '))<CR>",
-    defaults_opts
+	"n",
+	"<leader>lp",
+	"<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('LogPointMsg: '))<CR>",
+	defaults_opts
 )
 -- map("n", "<leader>dr", "<CMD>lua require('dap').repl.open()<CR>", defaults_opts)
 
@@ -125,4 +125,4 @@ map({ "n", "t" }, "<A-p>", "<CMD>lua require('Navigator').previous()<CR>", defau
 
 -- python-venv-selector
 map("n", "<leader>vs", "<CMD>VenvSelect<CR>", defaults_opts)
-map("n", "<leader>vs", "<CMD>VenvSelectCached<CR>", defaults_opts)
+map("n", "<leader>vr", "<CMD>VenvSelectCached<CR>", defaults_opts)

@@ -15,9 +15,6 @@ local opts = {
 	ui = {
 		border = "rounded",
 	},
-	-- defaults = {
-	-- 	lazy = true,
-	-- },
 }
 
 require("lazy").setup("plugins", opts)
