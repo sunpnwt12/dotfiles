@@ -8,7 +8,7 @@ Shell - [Fish](https://github.com/fish-shell/fish-shell)
 Prompt - [Starship](https://github.com/starship/starship)
 terminal multiplexer - [Tmux](https://github.com/tmux/tmux)
 
-Theme - [catppuccin]( https://github.com/catppuccin/catppuccin )
+Theme - [catppuccin](https://github.com/catppuccin/catppuccin)
 
 ## Neovim Setup
 
@@ -29,4 +29,4 @@ Plugins Manager - [jorgebucaran/fisher](https://github.com/jorgebucaran/fisher)
 - [charmbracelet/glow](https://github.com/charmbracelet/glow)
 - [ranger/ranger](https://github.com/ranger/ranger)
 - [jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
-- [https://github.com/sharkdp/bat](https://github.com/sharkdp/bat)
+- [sharkdp/bat](https://github.com/sharkdp/bat)
