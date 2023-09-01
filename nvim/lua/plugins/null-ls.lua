@@ -1,38 +1,41 @@
 local config = function()
-    local null_ls = require("null-ls")
-    local formatting = null_ls.builtins.formatting
-    local diagnostics = null_ls.builtins.diagnostics
-    local code_actions = null_ls.builtins.code_actions
+	local null_ls = require("null-ls")
+	local formatting = null_ls.builtins.formatting
+	local diagnostics = null_ls.builtins.diagnostics
+	local code_actions = null_ls.builtins.code_actions
 
-    null_ls.setup({
-        sources = {
-            -- lua
-            formatting.stylua,
+	null_ls.setup({
+		sources = {
+			-- lua
+			formatting.stylua,
 
-            -- python
-            formatting.ruff,
-            diagnostics.ruff,
+			-- python
+			formatting.ruff,
+			diagnostics.ruff,
 
-            -- rust
-            -- formatting.rustfmt,
+			-- rust
+			-- formatting.rustfmt,
 
-            -- ts/js
-            formatting.eslint_d,
-            diagnostics.eslint_d,
-            code_actions.eslint_d,
+			-- ts/js
+			-- formatting.eslint_d,
+			formatting.prettierd.with({
+				extra_filetypes = { "toml", "svelte" },
+			}),
+			diagnostics.eslint_d,
+			code_actions.eslint_d,
 
-            -- markdown
-            formatting.markdownlint,
-            diagnostics.markdownlint,
+			-- markdown
+			formatting.markdownlint,
+			diagnostics.markdownlint,
 
-            -- latex
-            formatting.latexindent,
-        },
-    })
+			-- latex
+			formatting.latexindent,
+		},
+	})
 end
 
 return {
-    "jose-elias-alvarez/null-ls.nvim",
-    config = config,
-    event = { "LspAttach" },
+	"jose-elias-alvarez/null-ls.nvim",
+	config = config,
+	event = { "LspAttach" },
 }

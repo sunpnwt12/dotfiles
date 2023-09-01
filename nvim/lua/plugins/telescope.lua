@@ -2,9 +2,16 @@ local config = function()
 	local telescope = require("telescope")
 	telescope.setup({
 		extensions = {
-			hijack_netrw = true,
-			zoxide = {
-				prompt_title = "Zoxide",
+			fzf = {
+				fuzzy = true,
+				override_generic_sorter = true,
+				override_file_sorter = true,
+				case_mode = "smart_case",
+			},
+			["ui-select"] = {
+				require("telescope.themes").get_dropdown({
+					-- even more opts
+				}),
 			},
 		},
 
@@ -19,17 +26,21 @@ local config = function()
 					"!**/.git/*",
 				},
 			},
+			current_buffer_fuzzy_find = {
+				theme = "dropdown",
+				previewer = false,
+			},
 		},
 	})
-	telescope.load_extension("zoxide")
-	telescope.load_extension("session-lens")
+	telescope.load_extension("fzf")
+	telescope.load_extension("ui-select")
 end
 
 return {
 	"nvim-telescope/telescope.nvim",
 	config = config,
 	version = "0.1.2",
-	cmd = "Telescope",
+	event = "VeryLazy",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},

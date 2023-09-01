@@ -1,19 +1,16 @@
 local opts = {
-    theme = "catppuccin-mocha",
-    dim_dirname = true, -- directory name is dimmed by default
-    bold_basename = true,
-    dim_context = false,
-    alt_background = false,
+	theme = "catppuccin-mocha",
+	exclude_filetypes = { "netrw", "toggleterm", "oil", "NvimTree" },
 }
 
 return {
-    "utilyre/barbecue.nvim",
-    name = "barbecue",
-    opts = opts,
-    version = "*",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-        "SmiteshP/nvim-navic",
-        "nvim-tree/nvim-web-devicons", -- optional dependency
-    },
+	"utilyre/barbecue.nvim",
+	name = "barbecue",
+	version = "*",
+	event = "LspAttach",
+	opts = opts,
+	dependencies = {
+		"SmiteshP/nvim-navic",
+		"nvim-tree/nvim-web-devicons", -- optional dependency
+	},
 }

@@ -65,10 +65,12 @@ map("n", "<leader>o", "<CMD>lua require('oil').open()<CR>", defaults_opts)
 -- Nvim-tree
 map("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", defaults_opts)
 
--- auto-session
-map("n", "<leader>fs", "<CMD>SearchSession<CR>", defaults_opts)
-map("n", "<leader>ss", "<CMD>SessionSave<CR>", defaults_opts)
-map("n", "<leader>sr", "<CMD>SessionRestore<CR>", defaults_opts)
+-- nvim-session-manager
+map("n", "<leader>fs", "<CMD>SessionManager load_session<CR>", defaults_opts)
+map("n", "<leader>sd", "<CMD>SessionManager delete_session<CR>", defaults_opts)
+map("n", "<leader>ss", "<CMD>SessionManager save_current_session<CR>", defaults_opts)
+map("n", "<leader>sr", "<CMD>SessionManager load_current_dir_session<CR>", defaults_opts)
+map("n", "<leader>sl", "<CMD>SessionManager load_last_session<CR>", defaults_opts)
 
 -- toggleterm
 map({ "n", "i", "t" }, "<C-\\>", "<CMD>exe v:count1 . 'ToggleTerm'<CR>", defaults_opts)
@@ -102,17 +104,17 @@ map("n", "<leader>gf", "<CMD>Neogit<CR>", defaults_opts)
 -- DAP
 -- map("n", "<leader>dt", "<CMD>lua require('dapui').toggle()<CR>", defaults_opts)
 map("n", "<F5>", "<CMD>lua require('dap').continue()<CR>", defaults_opts)
-map("n", "<F6>", "<CMD>lua require'dap'.step_over()<CR>", defaults_opts)
-map("n", "<F7>", "<CMD>lua require'dap'.step_into()<CR>", defaults_opts)
-map("n", "<F8>", "<CMD>lua require'dap'.step_out()<CR>", defaults_opts)
+map("n", "<F6>", "<CMD>lua require('dap').step_over()<CR>", defaults_opts)
+map("n", "<F7>", "<CMD>lua require('dap').step_into()<CR>", defaults_opts)
+map("n", "<F8>", "<CMD>lua require('dap').step_out()<CR>", defaults_opts)
 map("n", "<F9>", "<CMD>lua require('dap').restart()<CR>", defaults_opts)
 map("n", "<leader>b", "<CMD>lua require('dap').toggle_breakpoint()<CR>", defaults_opts)
 map("n", "<leader>B", "<CMD>lua require('dap').set_breakpoint(vim.fn.input('BreakPointCond: '))<CR>", defaults_opts)
 map(
-	"n",
-	"<leader>lp",
-	"<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('LogPointMsg: '))<CR>",
-	defaults_opts
+    "n",
+    "<leader>lp",
+    "<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('LogPointMsg: '))<CR>",
+    defaults_opts
 )
 -- map("n", "<leader>dr", "<CMD>lua require('dap').repl.open()<CR>", defaults_opts)
 

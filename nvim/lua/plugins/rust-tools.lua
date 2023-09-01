@@ -18,18 +18,18 @@ local config = function()
 		server = {
 			standalone = true,
 			capabilities = lsp_capabilities,
-			on_attach = function(_, bufnr)
-				vim.keymap.set("n", "<leader>k", rt.hover_actions.hover_actions, { buffer = bufnr })
-				vim.keymap.set("n", "<leader>ca", rt.code_action_group.code_action_group, { buffer = bufnr })
-			end,
-			-- clippy runs slow
-			-- settings = {
-			-- 	["rust-analyzer"] = {
-			-- 		checkOnSave = {
-			-- 			command = "clippy",
-			-- 		},
-			-- 	},
-			-- },
+			settings = {
+				["rust-analyzer"] = {
+					cargo = {
+						allFeatures = true,
+					},
+					checkOnSave = {
+						allFeatures = true,
+						command = "clippy",
+						extraArgs = { "--no-deps" },
+					},
+				},
+			},
 		},
 		tools = {
 			executor = require("rust-tools.executors").toggleterm,
