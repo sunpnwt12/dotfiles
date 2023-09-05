@@ -34,6 +34,9 @@ map({ "n", "v" }, "<leader>P", '"+P', defaults_opts)
 -- substitute all under cursor in the buffer
 -- map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- select all
+map("n", "<leader>a", "ggVG", defaults_opts)
+
 -- Resizing window
 map("n", "<C-Left>", "<CMD>vertical resize +3<CR>", defaults_opts)
 map("n", "<C-Right>", "<CMD>vertical resize -3<CR>", defaults_opts)
@@ -54,10 +57,6 @@ map("n", "<leader>fc", "<CMD>Telescope current_buffer_fuzzy_find<CR>", defaults_
 map("n", "<leader>fg", "<CMD>Telescope live_grep<CR>", defaults_opts)
 map("n", "<leader>fr", "<CMD>Telescope oldfiles<CR>", defaults_opts)
 -- map("n", "<C-p>", "<CMD>silent! Telescope git_files<CR>", defaults_opts)
--- telescope-zoxide
-map("n", "<leader>fz", "<CMD>Telescope zoxide list<CR>", defaults_opts)
--- telescope-undo
-map("n", "<leader>fu", "<CMD>Telescope undo<CR>", defaults_opts)
 
 -- oil
 map("n", "<leader>o", "<CMD>lua require('oil').open()<CR>", defaults_opts)
@@ -111,10 +110,10 @@ map("n", "<F9>", "<CMD>lua require('dap').restart()<CR>", defaults_opts)
 map("n", "<leader>b", "<CMD>lua require('dap').toggle_breakpoint()<CR>", defaults_opts)
 map("n", "<leader>B", "<CMD>lua require('dap').set_breakpoint(vim.fn.input('BreakPointCond: '))<CR>", defaults_opts)
 map(
-    "n",
-    "<leader>lp",
-    "<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('LogPointMsg: '))<CR>",
-    defaults_opts
+	"n",
+	"<leader>lp",
+	"<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('LogPointMsg: '))<CR>",
+	defaults_opts
 )
 -- map("n", "<leader>dr", "<CMD>lua require('dap').repl.open()<CR>", defaults_opts)
 

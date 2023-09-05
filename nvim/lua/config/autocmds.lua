@@ -25,6 +25,15 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 	group = my_augroup,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "DiffviewFiles" },
+	callback = function()
+		vim.keymap.set("n", "q", "<CMD>tabclose<CR>", { noremap = true, silent = true, buffer = true })
+	end,
+	group = my_augroup,
+})
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "rust" },
 	callback = function()

@@ -28,6 +28,7 @@ opt.showmatch = true
 
 -- opt.clipboard = "unnamedplus"
 opt.completeopt = "menu,menuone,noselect"
+opt.pumheight = 10
 
 -- opt.mouse = "a"
 

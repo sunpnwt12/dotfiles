@@ -1,6 +1,14 @@
 local config = function()
 	local telescope = require("telescope")
+	local actions = require("telescope.actions")
 	telescope.setup({
+		defaults = {
+			mappings = {
+				i = {
+					["<ESC>"] = actions.close,
+				},
+			},
+		},
 		extensions = {
 			fzf = {
 				fuzzy = true,
@@ -30,6 +38,10 @@ local config = function()
 				theme = "dropdown",
 				previewer = false,
 			},
+			buffers = {
+				theme = "dropdown",
+				previewer = false,
+			},
 		},
 	})
 	telescope.load_extension("fzf")
@@ -38,6 +50,7 @@ end
 
 return {
 	"nvim-telescope/telescope.nvim",
+	cond = true,
 	config = config,
 	version = "0.1.2",
 	event = "VeryLazy",
