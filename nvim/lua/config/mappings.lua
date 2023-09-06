@@ -89,7 +89,7 @@ map("n", "gr", "<CMD>Trouble lsp_references<CR>", defaults_opts)
 map("n", "<leader>xf", "<cmd>lua vim.diagnostic.open_float()<CR>", defaults_opts)
 
 -- code_runner
-map("n", "<leader>rc", "<CMD>RunCode<CR>", defaults_opts)
+map("n", "<leader>cr", "<CMD>RunCode<CR>", defaults_opts)
 
 -- Neogit
 map("n", "<leader>G", "<CMD>Neogit<CR>", defaults_opts)
