@@ -4,6 +4,9 @@ local config = function()
 	local luasnip = require("luasnip")
 
 	cmp.setup({
+		completion = {
+			completeopt = "menu,menuone.preview,onselect",
+		},
 		formatting = {
 			format = lspkind.cmp_format({
 				mode = "symbol_text",

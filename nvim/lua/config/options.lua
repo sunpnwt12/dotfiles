@@ -10,6 +10,7 @@ opt.splitright = true
 opt.number = true
 opt.relativenumber = true
 -- opt.cursorline = true
+-- opt.cursorlineopt = "number"
 
 opt.expandtab = true
 opt.smarttab = true
@@ -27,7 +28,6 @@ opt.hidden = true
 opt.showmatch = true
 
 -- opt.clipboard = "unnamedplus"
-opt.completeopt = "menu,menuone,noselect"
 opt.pumheight = 10
 
 -- opt.mouse = "a"

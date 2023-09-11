@@ -1,11 +1,7 @@
 local map = vim.keymap.set
 local defaults_opts = { noremap = true, silent = true }
 
--- command
--- vim.cmd([[command! Wd write|bdelete]])
-
 -- remap
---
 
 -- new line without leaving normal mode
 map("n", "<A-o>", "o<Esc>", defaults_opts)
@@ -25,14 +21,10 @@ map({ "n", "v" }, "<leader>d", '"_d', defaults_opts)
 -- copy from clipboard
 map({ "n", "v" }, "<leader>y", '"+y', defaults_opts)
 map("n", "<leader>Y", '"+yg_', defaults_opts)
--- map("n", "<leader>yy", '"+yy', defaults_opts)
 
 -- paste from clipboard
 map({ "n", "v" }, "<leader>p", '"+p', defaults_opts)
 map({ "n", "v" }, "<leader>P", '"+P', defaults_opts)
-
--- substitute all under cursor in the buffer
--- map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- select all
 map("n", "<leader>a", "ggVG", defaults_opts)
@@ -72,13 +64,12 @@ map("n", "<leader>sr", "<CMD>SessionManager load_current_dir_session<CR>", defau
 map("n", "<leader>sl", "<CMD>SessionManager load_last_session<CR>", defaults_opts)
 
 -- toggleterm
-map({ "n", "i", "t" }, "<C-\\>", "<CMD>exe v:count1 . 'ToggleTerm'<CR>", defaults_opts)
+map({ "n", "i", "t" }, "<C-t>", "<CMD>exe v:count1 . 'ToggleTerm'<CR>", defaults_opts)
+map("t", "<C-\\>", "<C-\\><C-n>", defaults_opts)
 
 -- bufferline
 map("n", "<S-l>", "<CMD>BufferLineCycleNext<CR>", defaults_opts)
 map("n", "<S-h>", "<CMD>BufferLineCyclePrev<CR>", defaults_opts)
--- map("n", "", "<CMD>BufferLineMoveNext<CR>", defaults_opts)
--- map("n", "", "<CMD>BufferLineMovePrev<CR>", defaults_opts)
 
 -- trouble
 map("n", "<leader>xx", "<CMD>Trouble<CR>", defaults_opts)
@@ -108,11 +99,16 @@ map("n", "<F7>", "<CMD>lua require('dap').step_into()<CR>", defaults_opts)
 map("n", "<F8>", "<CMD>lua require('dap').step_out()<CR>", defaults_opts)
 map("n", "<F9>", "<CMD>lua require('dap').restart()<CR>", defaults_opts)
 map("n", "<leader>b", "<CMD>lua require('dap').toggle_breakpoint()<CR>", defaults_opts)
-map("n", "<leader>B", "<CMD>lua require('dap').set_breakpoint(vim.fn.input('BreakPointCond: '))<CR>", defaults_opts)
+map(
+	"n",
+	"<leader>B",
+	"<CMD>lua require('dap').set_breakpoint(vim.fn.input('Break Point Condition: '))<CR>",
+	defaults_opts
+)
 map(
 	"n",
 	"<leader>lp",
-	"<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('LogPointMsg: '))<CR>",
+	"<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log Point Msg: '))<CR>",
 	defaults_opts
 )
 -- map("n", "<leader>dr", "<CMD>lua require('dap').repl.open()<CR>", defaults_opts)

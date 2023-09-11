@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<CR>", bufopts)
 		-- vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", bufopts) -- use trouble.nvim instead
 		vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", bufopts)
-		vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<CR>", bufopts)
+		vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", bufopts)
 		vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = false})<CR>", bufopts)
 		vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", bufopts)
 		vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", bufopts)
@@ -79,9 +79,11 @@ local lsp_config_conf = function()
 		-- and will be called for each installed server that doesn't have
 		-- a dedicated handler.
 		function(server_name) -- default handler (optional)
+			-- if server_name == "rust_analyzer" then goto continue end
 			require("lspconfig")[server_name].setup({
 				capabilities = lsp_capabilities,
 			})
+			-- ::continue::
 		end,
 		-- Next, you can provide targeted overrides for specific servers.
 		-- ["rust_analyzer"] = function()

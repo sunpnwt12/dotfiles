@@ -36,6 +36,7 @@ local config = function()
 				LineNr = { fg = colors.overlay1 },
 			}
 		end,
+		-- custom_highlights = {},
 		integrations = {
 			treesitter = true,
 			cmp = true,
