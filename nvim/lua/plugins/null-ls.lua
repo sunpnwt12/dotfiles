@@ -27,9 +27,6 @@ local config = function()
 			-- markdown
 			formatting.markdownlint,
 			diagnostics.markdownlint,
-
-			-- latex
-			formatting.latexindent,
 		},
 	})
 end

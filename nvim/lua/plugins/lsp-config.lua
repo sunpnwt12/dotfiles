@@ -35,7 +35,6 @@ local mason_lsp_opts = {
 		"tsserver",
 		"svelte",
 		"marksman",
-		"texlab",
 	},
 }
 
@@ -49,14 +48,10 @@ local mason_tool_installer_opts = {
 
 		-- Formater & Linter
 		"stylua",
-		"ruff",
-		"eslint_d",
 		"prettierd",
+		"eslint_d",
+		"ruff",
 		"markdownlint",
-		"latexindent",
-
-		-- Compiler
-		"tectonic",
 	},
 	auto_update = false,
 	run_on_start = true,
@@ -112,28 +107,6 @@ local lsp_config_conf = function()
 					Lua = {
 						diagnostics = {
 							globals = { "vim" },
-						},
-					},
-				},
-			})
-		end,
-
-		["texlab"] = function()
-			lspconfig.texlab.setup({
-				capabilities = lsp_capabilities,
-				settings = {
-					taxlab = {
-						build = {
-							executable = "tectonic",
-							args = {
-								"-X",
-								"compile",
-								"%f",
-								"--synctex",
-								"--keep-logs",
-								"--keep-intermediates",
-							},
-							onSave = true,
 						},
 					},
 				},
