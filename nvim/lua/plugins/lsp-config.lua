@@ -50,6 +50,7 @@ local mason_tool_installer_opts = {
 		"stylua",
 		"prettierd",
 		"eslint_d",
+		"black",
 		"ruff",
 		"markdownlint",
 	},

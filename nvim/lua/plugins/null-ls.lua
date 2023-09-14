@@ -10,7 +10,7 @@ local config = function()
 			formatting.stylua,
 
 			-- python
-			formatting.ruff,
+			formatting.black,
 			diagnostics.ruff,
 
 			-- rust
@@ -34,5 +34,5 @@ end
 return {
 	"jose-elias-alvarez/null-ls.nvim",
 	config = config,
-	event = { "LspAttach" },
+	event = "LspAttach",
 }
