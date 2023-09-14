@@ -70,6 +70,8 @@ map("t", "<C-\\>", "<C-\\><C-n>", defaults_opts)
 -- bufferline
 map("n", "<S-l>", "<CMD>BufferLineCycleNext<CR>", defaults_opts)
 map("n", "<S-h>", "<CMD>BufferLineCyclePrev<CR>", defaults_opts)
+map("n", "]b", "<CMD>BufferLineMoveNext<CR>", defaults_opts)
+map("n", "[b", "<CMD>BufferLineMovePrev<CR>", defaults_opts)
 
 -- trouble
 map("n", "<leader>xx", "<CMD>Trouble<CR>", defaults_opts)

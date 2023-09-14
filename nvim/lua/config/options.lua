@@ -9,8 +9,8 @@ opt.splitright = true
 
 opt.number = true
 opt.relativenumber = true
--- opt.cursorline = true
--- opt.cursorlineopt = "number"
+opt.cursorline = true
+opt.cursorlineopt = "number"
 
 opt.expandtab = true
 opt.smarttab = true
