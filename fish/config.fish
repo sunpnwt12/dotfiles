@@ -10,32 +10,36 @@ end
 set -gx NVM_DIR ~/.nvm
 nvm use default --silent
 
+# bun
+set -gx BUN_INSTALL "$HOME/.bun"
+set -gx PATH $BUN_INSTALL/bin $PATH
+
 # shortcut for cheat.sh
 function cs
     curl cheat.sh/$argv[1]/$argv[2]
 end
 
-function mb
+function mamba
     micromamba $argv
 end
 
 # alias
-alias ls="exa -la --icons"
+alias ls="eza -la --icons"
 alias lg="lazygit"
 alias gitui='gitui -t mocha.ron'
 alias nv="nvim"
 alias ipy="ipython3" 
-# alias mb='mircomamba'
 alias tmux="tmux -u"
-alias jt='joshuto'
 
 set -gx BAT_THEME "Catppuccin-mocha"
 set -gx EDITOR "nvim"
 
 # setup fzf
-set -gx FZF_DEFAULT_COMMAND "rg --files --no-ignore-vcs --glob --hidden"
-set -gx FZF_CTRL_T_COMMAND "rg --files --no-ignore-vcs --glob --hidden"
-# set -gx FZF_ALT_C_COMMAND "fd --type d --no-ignore-vcs --hidden --exclude node_modules --exclude .git"]
+set -gx FZF_DEFAULT_COMMAND "rg --files --no-ignore-vcs --hidden"
+set -gx FZF_DEFAULT_OPTS "--height 40% --layout=reverse"
+
+# starship
+set -gx STARSHIP_LOG "error"
 
 starship init fish | source
 zoxide init fish | source
@@ -48,3 +52,4 @@ set -gx MAMBA_ROOT_PREFIX "/home/sunpnwt/micromamba"
 $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
 micromamba activate
 # <<< mamba initialize <<<
+
