@@ -1,3 +1,6 @@
+scan_timeout = 10
+command_timeout = 300
+
 [character]
 success_symbol = "[>](bold green)"
 error_symbol = "[x](bold red)"
@@ -17,9 +20,6 @@ stashed = "$"
 staged = "+"
 renamed = "r"
 deleted = "x"
-
-[git_metrics]
-disabled = false
 
 [aws]
 symbol = "aws "
