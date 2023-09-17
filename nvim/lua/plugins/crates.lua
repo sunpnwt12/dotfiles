@@ -33,5 +33,5 @@ return {
 	tag = "v0.3.0",
 	config = config,
 	event = "BufRead Cargo.toml",
-	dependencies = "jose-elias-alvarez/null-ls.nvim",
+	dependencies = "nvim-lua/plenary.nvim",
 }

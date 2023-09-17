@@ -48,7 +48,7 @@ map("n", "<leader>fb", "<CMD>Telescope buffers<CR>", defaults_opts)
 map("n", "<leader>fc", "<CMD>Telescope current_buffer_fuzzy_find<CR>", defaults_opts)
 map("n", "<leader>fg", "<CMD>Telescope live_grep<CR>", defaults_opts)
 map("n", "<leader>fr", "<CMD>Telescope oldfiles<CR>", defaults_opts)
--- map("n", "<C-p>", "<CMD>silent! Telescope git_files<CR>", defaults_opts)
+map("n", "<leader>fp", "<CMD>silent! Telescope git_files<CR>", defaults_opts)
 
 -- oil
 map("n", "<leader>o", "<CMD>lua require('oil').open()<CR>", defaults_opts)
