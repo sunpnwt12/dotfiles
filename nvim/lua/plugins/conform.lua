@@ -2,6 +2,8 @@ local config = function()
 	local bin_path = vim.fn.stdpath("data") .. "/mason/bin/"
 	-- markdown
 	local markdownlint_bin = bin_path .. "markdownlint"
+	-- ruff
+	local ruff_bin = bin_path .. "ruff"
 
 	require("conform").setup({
 		format_on_save = {
@@ -12,7 +14,10 @@ local config = function()
 			lua = { "stylua" },
 			javascript = { "prettierd" },
 			typescript = { "prettierd" },
-			python = { "black" },
+			toml = { "prettierd" },
+			yaml = { "prettierd" },
+			json = { "prettierd" },
+			python = { "ruff" },
 			markdown = { "markdownlint" },
 			["*"] = { "trim_whitespace", "trim_newlines" },
 		},
@@ -20,6 +25,10 @@ local config = function()
 			markdownlint = {
 				command = markdownlint_bin,
 				args = { "--fix", "$FILENAME" },
+			},
+			ruff = {
+				command = ruff_bin,
+				args = { "format", "--stdin-filename", "$FILENAME" },
 			},
 		},
 	})

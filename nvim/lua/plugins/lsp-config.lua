@@ -50,7 +50,6 @@ local mason_tool_installer_opts = {
 		"stylua",
 		"prettierd",
 		"eslint_d",
-		"black",
 		"ruff",
 		"markdownlint",
 	},
@@ -85,12 +84,6 @@ local lsp_config_conf = function()
 		-- ["rust_analyzer"] = function()
 		-- 	lspconfig.rust_analyzer.setup({
 		-- 		capabilities = lsp_capabilities,
-		-- 		cmp = {
-		-- 			"rustup",
-		-- 			"run",
-		-- 			"stable",
-		-- 			"rust_analyzer",
-		-- 		},
 		-- 		settings = {
 		-- 			["rust-analyzer"] = {
 		-- 				checkOnSave = {

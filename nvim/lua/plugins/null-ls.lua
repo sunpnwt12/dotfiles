@@ -10,7 +10,10 @@ local config = function()
 			formatting.stylua,
 
 			-- python
-			formatting.black,
+			-- formatting.black,
+			formatting.ruff.with({
+				args = { "format", "--stdin-filename", "$FILENAME" },
+			}),
 			diagnostics.ruff,
 
 			-- rust
