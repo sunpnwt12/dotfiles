@@ -1,5 +1,5 @@
 local opts = {
-	theme = "catppuccin-mocha",
+	theme = "auto",
 	exclude_filetypes = { "netrw", "toggleterm", "oil", "NvimTree" },
 }
 

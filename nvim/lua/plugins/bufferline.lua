@@ -14,15 +14,16 @@ local config = function()
 			close_icon = "",
 			left_trunc_marker = "",
 			right_trunc_marker = "",
-			separator_style = "thick",
-			indicator = {
-				icon = "▎", -- this should be omitted if indicator style is not 'icon'
-				style = "icon",
-			},
+			separator_style = { "", "" },
+			-- indicator = {
+			-- 	icon = "▎", -- this should be omitted if indicator style is not 'icon'
+			-- 	style = "icon",
+			-- },
 		},
-		highlights = require("catppuccin.groups.integrations.bufferline").get(),
+		-- highlights = require("catppuccin.groups.integrations.bufferline").get(),
 	})
 end
+
 return {
 	"akinsho/bufferline.nvim",
 	config = config,
