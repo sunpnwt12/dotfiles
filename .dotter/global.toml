@@ -14,5 +14,6 @@ ranger = "~/.config/ranger"
 starship = "~/.config"
 zellij = "~/.config/zellij"
 tmux = "~"
+wezterm = "~/.config"
 
 [default.variables]
