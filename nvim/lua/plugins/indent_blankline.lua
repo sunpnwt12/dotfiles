@@ -5,6 +5,7 @@ local opts = {
 	-- char = "▏",
 	-- context_char = "▏",
 	-- use_treesitter_scope = true,
+	file_type_exclude = { "help", "oil", "lspinfo", "checkhealth" },
 }
 
 return {

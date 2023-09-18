@@ -1,6 +1,7 @@
 local config = function()
 	require("bufferline").setup({
 		options = {
+			themable = false,
 			offsets = {
 				{
 					filetype = "NvimTree",
