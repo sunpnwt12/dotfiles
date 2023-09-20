@@ -31,11 +31,11 @@ local config = function()
 			operators = {},
 		},
 		color_overrides = {},
-		custom_highlights = function(colors)
-			return {
-				LineNr = { fg = colors.overlay1 },
-			}
-		end,
+		-- custom_highlights = function(colors)
+		-- 	return {
+		-- 		LineNr = { fg = colors.overlay1 },
+		-- 	}
+		-- end,
 		-- custom_highlights = {},
 		integrations = {
 			treesitter = true,
