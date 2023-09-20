@@ -59,6 +59,10 @@ local mason_tool_installer_opts = {
 	debounce_hours = 5, -- at least 5 hours between attempts to install/update
 }
 
+for _, v in pairs(mason_lsp_opts.ensure_installed) do
+	table.insert(mason_tool_installer_opts.ensure_installed, v)
+end
+
 local lsp_config_conf = function()
 	require("lspconfig.ui.windows").default_options.border = "rounded"
 	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
