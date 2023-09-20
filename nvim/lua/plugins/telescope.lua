@@ -26,12 +26,22 @@ local config = function()
 		pickers = {
 			find_files = {
 				find_command = {
-					"rg",
-					"--ignore",
+					---- ripgrep
+					-- "rg",
+					-- "--ignore",
+					-- "--hidden",
+					-- "--files",
+					-- "--glob",
+					-- "!**/.git/*",
+
+					---- fd
+					"fd",
+					"--type",
+					"file",
+					"--absolute-path",
 					"--hidden",
-					"--files",
-					"--glob",
-					"!**/.git/*",
+					"--exclude",
+					".git",
 				},
 			},
 			current_buffer_fuzzy_find = {

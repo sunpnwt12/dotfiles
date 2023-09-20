@@ -1,7 +1,21 @@
 local config = function()
 	-- for max performance
 	require("fzf-lua").setup()
-	require("fzf-lua").register_ui_select()
+	require("fzf-lua").register_ui_select(function(_, items)
+		local min_h, max_h = 0.15, 0.70
+		local h = (#items + 4) / vim.o.lines
+		if h < min_h then
+			h = min_h
+		elseif h > max_h then
+			h = max_h
+		end
+		return { winopts = { height = h, width = 0.40, row = 0.40 } }
+	end)
+
+	vim.api.nvim_create_autocmd("VimResized", {
+		pattern = "*",
+		command = 'lua require("fzf-lua").redraw()',
+	})
 
 	local map = vim.keymap.set
 	local defaults_opts = { noremap = true, silent = true }
