@@ -28,7 +28,7 @@ local config = function()
 			},
 			ruff = {
 				command = ruff_bin,
-				args = { "format", "--stdin-filename", "$FILENAME" },
+				args = { "output-format", "--stdin-filename", "$FILENAME" },
 			},
 		},
 	})

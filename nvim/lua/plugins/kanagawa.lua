@@ -9,15 +9,15 @@ local opts = {
 	transparent = false, -- do not set background color
 	dimInactive = true, -- dim inactive window `:h hl-NormalNC`
 	terminalColors = true, -- define vim.g.terminal_color_{0,17}
-	overrides = function(colors)
-		-- local theme = colors.theme
-		return {
-			Visual = { bg = 3552838 },
-			Pmenu = { bg = 3552838 },
-			PmenuSel = { bg = 3552838 },
-			PmenuThumb = { bg = 3552838 },
-		}
-	end,
+	-- overrides = function(colors)
+	-- 	-- local theme = colors.theme
+	-- 	return {
+	-- 		-- Visual = { bg = 3552838 },
+	-- 		-- Pmenu = { bg = 3552838 },
+	-- 		-- PmenuSel = { bg = 3552838 },
+	-- 		-- PmenuThumb = { bg = 3552838 },
+	-- 	}
+	-- end,
 	theme = "wave", -- load "wave" theme when 'background' option is not set
 	background = { -- map the value of 'background' option to a theme
 		dark = "wave", -- try "dragon" !

@@ -1,6 +1,12 @@
+local opts = {
+	integrations = {
+		diffview = true,
+	},
+}
+
 return {
 	"NeogitOrg/neogit",
-	config = true,
+	opts = opts,
 	cmd = "Neogit",
 	dependencies = {
 		"nvim-lua/plenary.nvim", -- required

@@ -38,7 +38,7 @@ local config = function()
 					"fd",
 					"--type",
 					"file",
-					"--absolute-path",
+					"--strip-cwd-prefix",
 					"--hidden",
 					"--exclude",
 					".git",

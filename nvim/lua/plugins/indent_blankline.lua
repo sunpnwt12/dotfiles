@@ -1,15 +1,18 @@
 local opts = {
-	show_current_context = true,
-	-- show_current_context_start = true,
-	use_treesitter = true,
-	-- char = "▏",
-	-- context_char = "▏",
-	-- use_treesitter_scope = true,
-	file_type_exclude = { "help", "oil", "lspinfo", "checkhealth" },
+    indent = {
+        char = "│",
+        highlight = "IndentBlanklineChar",
+    },
+    scope = {
+        enabled = false,
+        show_start = false,
+        show_end = false,
+        highlight = "IndentBlanklineContextChar",
+    },
 }
-
 return {
-	"lukas-reineke/indent-blankline.nvim",
-	opts = opts,
-	event = { "BufReadPre", "BufNewFile" },
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = opts,
+    event = { "BufReadPost", "BufNewFile" },
 }

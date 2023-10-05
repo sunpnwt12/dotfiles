@@ -56,7 +56,6 @@ local opts = {
 	inactive_winbar = {},
 	extensions = {},
 }
-
 return {
 	"nvim-lualine/lualine.nvim",
 	opts = opts,

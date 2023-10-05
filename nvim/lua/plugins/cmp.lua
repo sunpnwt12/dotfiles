@@ -5,7 +5,7 @@ local config = function()
 
 	cmp.setup({
 		completion = {
-			completeopt = "menuone,preview",
+			completeopt = "menu,menuone,noselect,preview",
 		},
 		formatting = {
 			format = lspkind.cmp_format({

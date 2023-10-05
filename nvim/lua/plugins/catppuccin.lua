@@ -79,5 +79,6 @@ return {
 	name = "catppuccin",
 	lazy = false,
 	config = config,
+	cond = false,
 	priority = 1000,
 }

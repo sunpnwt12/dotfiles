@@ -1,5 +1,10 @@
 local dap_conf = function()
 	-- You NEED to override nvim-dap's default highlight groups, AFTER requiring nvim-dap
+	local mason_registry = require("mason-registry")
+
+	local codelldb = mason_registry.get_package("codelldb")
+	local extesion_path = codelldb:get_install_path() .. "/extension/"
+	local codelldb_path = extesion_path .. "adapter/codelldb"
 
 	require("dap")
 	local sign = vim.fn.sign_define
@@ -33,12 +38,14 @@ local dap_conf = function()
 		executable = {
 			-- CHANGE THIS to your path!
 			--
-			command = "~/.local/share/nvim/mason/packages/codelldb/extension/adapter/codelldb",
+			-- command = "~/.local/share/nvim/mason/packages/codelldb/extension/adapter/codelldb",
+			command = codelldb_path,
 			args = { "--port", "${port}" },
 
 			-- On windows you may have to uncomment this:
 			-- detached = false,
 		},
+		-- showDisassembly = "never",
 	}
 end
 
@@ -73,6 +80,5 @@ return {
 		config = dap_python_conf,
 		dependencies = "mfussenegger/nvim-dap",
 		keys = trigger_keys,
-		-- ft = { "python" },
 	},
 }

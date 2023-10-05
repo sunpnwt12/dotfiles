@@ -12,7 +12,7 @@ local config = function()
 			-- python
 			-- formatting.black,
 			formatting.ruff.with({
-				args = { "format", "--stdin-filename", "$FILENAME" },
+				args = { "output-format", "--stdin-filename", "$FILENAME" },
 			}),
 			diagnostics.ruff,
 
@@ -35,7 +35,7 @@ local config = function()
 end
 
 return {
-	"jose-elias-alvarez/null-ls.nvim",
+	"nvimtools/none-ls.nvim",
 	config = config,
 	event = "LspAttach",
 }

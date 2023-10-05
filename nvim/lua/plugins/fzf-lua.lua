@@ -27,7 +27,8 @@ local config = function()
 	map("n", "<leader>fc", "<CMD>lua require('fzf-lua').lgrep_curbuf()<CR>", defaults_opts)
 	map("n", "<leader>fg", "<CMD>lua require('fzf-lua').live_grep()<CR>", defaults_opts)
 	map("n", "<leader>fr", "<CMD>lua require('fzf-lua').oldfiles()<CR>", defaults_opts)
-	map("n", "<C-p>", "<CMD>lua require('fzf-lua').gitfiles()<CR>", defaults_opts)
+	map("n", "<leader>fp", "<CMD>lua require('fzf-lua').gitfiles()<CR>", defaults_opts)
+	map("n", "<leader>fo", "<CMD>lua require('fzf-lua').lsp_document_symbols()<CR>", defaults_opts)
 end
 
 return {
