@@ -12,7 +12,7 @@ local config = function()
 			-- python
 			-- formatting.black,
 			formatting.ruff.with({
-				args = { "output-format", "--stdin-filename", "$FILENAME" },
+				args = { "format", "--stdin-filename", "$FILENAME" },
 			}),
 			diagnostics.ruff,
 

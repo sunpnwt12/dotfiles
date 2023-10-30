@@ -37,7 +37,7 @@ map("n", "<C-Down>", "<CMD>resize -3<CR>", defaults_opts)
 map("n", "<leader>ms", "<CMD>Mason<CR>", defaults_opts)
 map("n", "<leader>lz", "<CMD>Lazy<CR>", defaults_opts)
 map("n", "<leader>li", "<CMD>LspInfo<CR>", defaults_opts)
-map("n", "<leader>ni", "<CMD>NullLsInfo<CR>", defaults_opts)
+-- map("n", "<leader>ni", "<CMD>NullLsInfo<CR>", defaults_opts)
 
 -- telescope
 map("n", "<leader>ff", "<CMD>Telescope find_files<CR>", defaults_opts)
@@ -56,7 +56,8 @@ map("n", "<leader>o", "<CMD>lua require('oil').open()<CR>", defaults_opts)
 map("n", "<leader>e", "<CMD>NvimTreeToggle<CR>", defaults_opts)
 
 -- Aerial
-map("n", "<leader>N", "<CMD>AerialToggle<CR>", defaults_opts)
+map("n", "<leader>n", "<CMD>AerialToggle<CR>", defaults_opts)
+map("n", "<leader>N", "<CMD>AerialNavToggle<CR>", defaults_opts)
 
 -- nvim-session-manager
 map("n", "<leader>fs", "<CMD>SessionManager load_session<CR>", defaults_opts)

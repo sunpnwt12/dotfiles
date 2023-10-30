@@ -7,6 +7,7 @@ return {
 	"utilyre/barbecue.nvim",
 	name = "barbecue",
 	version = "*",
+	enabled = false,
 	event = "LspAttach",
 	opts = opts,
 	dependencies = {
