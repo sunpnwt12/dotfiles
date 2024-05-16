@@ -105,16 +105,16 @@ map("n", "<F9>", "<CMD>lua require('dap').restart()<CR>", defaults_opts)
 map("n", "<F10>", "<CMD>lua require('dap').terminate()<CR>", defaults_opts)
 map("n", "<leader>b", "<CMD>lua require('dap').toggle_breakpoint()<CR>", defaults_opts)
 map(
-	"n",
-	"<leader>B",
-	"<CMD>lua require('dap').set_breakpoint(vim.fn.input('Break Point Condition: '))<CR>",
-	defaults_opts
+    "n",
+    "<leader>B",
+    "<CMD>lua require('dap').set_breakpoint(vim.fn.input('Break Point Condition: '))<CR>",
+    defaults_opts
 )
 map(
-	"n",
-	"<leader>lp",
-	"<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log Point Msg: '))<CR>",
-	defaults_opts
+    "n",
+    "<leader>lp",
+    "<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log Point Msg: '))<CR>",
+    defaults_opts
 )
 -- map("n", "<leader>dr", "<CMD>lua require('dap').repl.open()<CR>", defaults_opts)
 

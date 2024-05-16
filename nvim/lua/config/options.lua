@@ -11,6 +11,7 @@ opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
 opt.cursorlineopt = "number"
+opt.fillchars = { eob = " " }
 
 opt.expandtab = true
 opt.smarttab = true

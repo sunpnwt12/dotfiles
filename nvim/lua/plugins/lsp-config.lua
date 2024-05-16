@@ -31,10 +31,9 @@ local mason_lsp_opts = {
         -- Replace these with whatever servers you want to install
         "lua_ls",
         "pyright",
+        'ruff',
         -- "mypy",
         "rust_analyzer",
-        "tsserver",
-        "svelte",
         "marksman",
     },
 }
@@ -50,7 +49,6 @@ local mason_tool_installer_opts = {
         -- Formater & Linter
         "stylua",
         "prettierd",
-        "eslint_d",
         "ruff",
         "markdownlint",
     },

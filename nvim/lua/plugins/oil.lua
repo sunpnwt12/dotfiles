@@ -19,7 +19,6 @@ local opts = {
     },
     delete_to_trash = true,
     skip_confirm_for_simple_edits = true,
-    trash_command = "trash-put",
 }
 
 return {
