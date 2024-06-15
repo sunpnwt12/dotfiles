@@ -71,6 +71,7 @@ local lsp_config_conf = function()
     local lspconfig = require("lspconfig")
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+    lsp_capabilities.textDocument.completion.completionItem.snippetSupport = false
 
     local handlers = {
         -- The first entry (without a key) will be the default handler
@@ -84,19 +85,6 @@ local lsp_config_conf = function()
             -- ::continue::
         end,
         -- Next, you can provide targeted overrides for specific servers.
-        -- ["rust_analyzer"] = function()
-        -- 	lspconfig.rust_analyzer.setup({
-        -- 		capabilities = lsp_capabilities,
-        -- 		settings = {
-        -- 			["rust-analyzer"] = {
-        -- 				checkOnSave = {
-        -- 					command = "clippy",
-        -- 				},
-        -- 			},
-        -- 		},
-        -- 	})
-        -- end,
-
         ["lua_ls"] = function()
             lspconfig.lua_ls.setup({
                 capabilities = lsp_capabilities,

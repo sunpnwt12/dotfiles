@@ -1,4 +1,6 @@
 return {
-    'sainnhe/sonokai',
+    "sainnhe/sonokai",
+    cond = false,
     config = true,
+
 }

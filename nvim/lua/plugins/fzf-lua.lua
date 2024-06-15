@@ -33,7 +33,7 @@ end
 
 return {
     "ibhagwan/fzf-lua",
-    cond = true,
+    cond = false,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = config,
     event = "VeryLazy",

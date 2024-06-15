@@ -123,7 +123,7 @@ map({ "n", "t" }, "<A-h>", "<CMD>lua require('Navigator').left()<CR>", defaults_
 map({ "n", "t" }, "<A-l>", "<CMD>lua require('Navigator').right()<CR>", defaults_opts)
 map({ "n", "t" }, "<A-k>", "<CMD>lua require('Navigator').up()<CR>", defaults_opts)
 map({ "n", "t" }, "<A-j>", "<CMD>lua require('Navigator').down()<CR>", defaults_opts)
-map({ "n", "t" }, "<A-p>", "<CMD>lua require('Navigator').previous()<CR>", defaults_opts)
+-- map({ "n", "t" }, "<A-p>", "<CMD>lua require('Navigator').previous()<CR>", defaults_opts)
 
 -- python-venv-selector
 map("n", "<leader>vs", "<CMD>VenvSelect<CR>", defaults_opts)

@@ -77,7 +77,7 @@ end
 
 return {
     "nvim-telescope/telescope.nvim",
-    cond = false,
+    cond = true,
     config = config,
     version = "0.1.6",
     event = "VeryLazy",

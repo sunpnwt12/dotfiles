@@ -41,14 +41,6 @@ vim.api.nvim_create_autocmd("FileType", {
 -- 	end,
 -- })
 
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "rust" },
-    group = my_augroup,
-    callback = function()
-        vim.keymap.set("n", "<F5>", "<CMD>RustDebuggables<CR>", { noremap = true, silent = true, buffer = true })
-    end,
-})
-
 vim.api.nvim_create_autocmd("User", {
     pattern = "NeogitStatusRefreshed",
     group = my_augroup,

@@ -41,7 +41,7 @@ opt.splitright = true
 opt.swapfile = false
 opt.backup = false
 
-opt.scrolloff = 8
+opt.scrolloff = 10
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
