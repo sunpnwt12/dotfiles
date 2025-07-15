@@ -36,18 +36,19 @@ map("n", "<C-Down>", "<CMD>resize -3<CR>", defaults_opts)
 -- Info shortcut
 map("n", "<leader>ms", "<CMD>Mason<CR>", defaults_opts)
 map("n", "<leader>lz", "<CMD>Lazy<CR>", defaults_opts)
-map("n", "<leader>li", "<CMD>LspInfo<CR>", defaults_opts)
+-- map("n", "<leader>li", "<CMD>LspInfo<CR>", defaults_opts)
 -- map("n", "<leader>ni", "<CMD>NullLsInfo<CR>", defaults_opts)
 
--- telescope
-map("n", "<leader>ff", "<CMD>Telescope find_files<CR>", defaults_opts)
-map("n", "<leader>fk", "<CMD>Telescope keymaps<CR>", defaults_opts)
-map("n", "<leader>fb", "<CMD>Telescope buffers<CR>", defaults_opts)
-map("n", "<leader>fc", "<CMD>Telescope current_buffer_fuzzy_find<CR>", defaults_opts)
-map("n", "<leader>fg", "<CMD>Telescope live_grep<CR>", defaults_opts)
-map("n", "<leader>fr", "<CMD>Telescope oldfiles<CR>", defaults_opts)
-map("n", "<leader>fo", "<CMD>Telescope lsp_document_symbols<CR>", defaults_opts)
-map("n", "<leader>fp", "<CMD>silent! Telescope git_files<CR>", defaults_opts)
+-- -- telescope
+-- map("n", "<leader>ff", "<CMD>Telescope find_files<CR>", defaults_opts)
+-- map("n", "<leader>fk", "<CMD>Telescope keymaps<CR>", defaults_opts)
+-- map("n", "<leader>fb", "<CMD>Telescope buffers<CR>", defaults_opts)
+-- map("n", "<leader>fc", "<CMD>Telescope current_buffer_fuzzy_find<CR>", defaults_opts)
+-- map("n", "<leader>fg", "<CMD>Telescope live_grep<CR>", defaults_opts)
+-- map("n", "<leader>fr", "<CMD>Telescope oldfiles<CR>", defaults_opts)
+-- map("n", "<leader>fo", "<CMD>Telescope lsp_document_symbols<CR>", defaults_opts)
+-- map("n", "<leader>fp", "<CMD>silent! Telescope git_files<CR>", defaults_opts)
+-- map("n", "<leader>fu", "<CMD>Telescope undo<CR>", defaults_opts)
 
 -- oil
 map("n", "<leader>o", "<CMD>lua require('oil').open()<CR>", defaults_opts)
@@ -105,16 +106,16 @@ map("n", "<F9>", "<CMD>lua require('dap').restart()<CR>", defaults_opts)
 map("n", "<F10>", "<CMD>lua require('dap').terminate()<CR>", defaults_opts)
 map("n", "<leader>b", "<CMD>lua require('dap').toggle_breakpoint()<CR>", defaults_opts)
 map(
-    "n",
-    "<leader>B",
-    "<CMD>lua require('dap').set_breakpoint(vim.fn.input('Break Point Condition: '))<CR>",
-    defaults_opts
+	"n",
+	"<leader>B",
+	"<CMD>lua require('dap').set_breakpoint(vim.fn.input('Break Point Condition: '))<CR>",
+	defaults_opts
 )
 map(
-    "n",
-    "<leader>lp",
-    "<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log Point Msg: '))<CR>",
-    defaults_opts
+	"n",
+	"<leader>lp",
+	"<CMD>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log Point Msg: '))<CR>",
+	defaults_opts
 )
 -- map("n", "<leader>dr", "<CMD>lua require('dap').repl.open()<CR>", defaults_opts)
 
