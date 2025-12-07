@@ -1,5 +1,5 @@
 require("config.options")
-require("core.lazy")
+require("config.lazy")
 require("config.autocmds")
 require("config.mappings")
 

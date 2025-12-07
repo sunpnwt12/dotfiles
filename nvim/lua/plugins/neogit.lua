@@ -6,11 +6,12 @@ local opts = {
 
 return {
 	"NeogitOrg/neogit",
+	cond = false,
 	opts = opts,
 	cmd = "Neogit",
 	dependencies = {
 		"nvim-lua/plenary.nvim", -- required
-		"nvim-telescope/telescope.nvim", -- optional
+		-- "nvim-telescope/telescope.nvim", -- optional
 		"sindrets/diffview.nvim", -- optional
 	},
 }

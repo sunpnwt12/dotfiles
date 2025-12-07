@@ -11,6 +11,7 @@ local config = function()
 end
 return {
 	"windwp/nvim-autopairs",
+	cond = true,
 	config = config,
 	event = "InsertEnter",
 }

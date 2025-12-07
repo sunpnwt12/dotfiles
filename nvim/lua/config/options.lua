@@ -12,6 +12,7 @@ opt.relativenumber = true
 opt.cursorline = true
 opt.cursorlineopt = "number"
 opt.fillchars = { eob = " " }
+opt.completeopt = "menu,popup,noselect"
 
 opt.expandtab = true
 opt.smarttab = true
@@ -37,6 +38,7 @@ opt.showmode = false
 
 opt.splitbelow = true
 opt.splitright = true
+-- opt.winborder = "rounded"
 
 opt.swapfile = false
 opt.backup = false

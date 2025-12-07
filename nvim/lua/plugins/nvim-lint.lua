@@ -14,6 +14,5 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 return {
 	"mfussenegger/nvim-lint",
 	config = config,
-	enabled = true, -- enable this when null-ls is eventually broke
 	event = "LspAttach",
 }
