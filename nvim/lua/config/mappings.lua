@@ -1,7 +1,11 @@
 local map = vim.keymap.set
 local defaults_opts = { noremap = true, silent = true }
+local function defaults_opts_with(extra_desc)
+	return { noremap = true, silent = true, desc = extra_desc }
+end
 
 -- new line without leaving normal mode
+--
 map("n", "<A-o>", "o<Esc>", defaults_opts)
 map("n", "<A-O>", "O<Esc>", defaults_opts)
 

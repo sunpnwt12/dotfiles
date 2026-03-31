@@ -35,4 +35,8 @@ vim.api.nvim_create_user_command("BD", function(n)
 	Snacks.bufdelete(n)
 end, {})
 
+vim.api.nvim_create_user_command("TSStart", function()
+	vim.treesitter.start()
+end, {})
+
 vim.diagnostic.config({ virtual_text = true })

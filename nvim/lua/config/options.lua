@@ -38,7 +38,7 @@ opt.showmode = false
 
 opt.splitbelow = true
 opt.splitright = true
--- opt.winborder = "rounded"
+opt.winborder = "rounded"
 
 opt.swapfile = false
 opt.backup = false
