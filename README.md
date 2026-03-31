@@ -1,18 +1,17 @@
 # dotfiles
 
-This is my repository for managing my dotfiles.  
-Managed by [SuperCuber/dotter](https://github.com/SuperCuber/dotter)
+This is my repository for managing my dotfiles.
 
-Text editor - [Neovim](https://github.com/neovim/neovim)  
-Shell - [Fish](https://github.com/fish-shell/fish-shell)  
-Prompt - [Starship](https://github.com/starship/starship)  
-terminal multiplexer - [Tmux](https://github.com/tmux/tmux)  
-Theme - [catppuccin](https://github.com/catppuccin/catppuccin)
+Text editor - [Neovim](https://github.com/neovim/neovim)
+Shell - [Fish](https://github.com/fish-shell/fish-shell)
+Prompt - [Starship](https://github.com/starship/starship)
+terminal multiplexer - [Tmux](https://github.com/tmux/tmux)
+Theme - [kanagawa](https://github.com/rebelot/kanagawa.nvim)
 
 ## Neovim Setup
 
-[Neovim](https://github.com/neovim/neovim) >= 0.9  
-Plugins manager - [folke/lazy.nvim](https://github.com/folke/lazy.nvim)
+[Neovim](https://github.com/neovim/neovim) >= 0.12
+Plugins manager - native vim.pack
 
 ## Shell Setup
 
@@ -26,6 +25,5 @@ Plugins Manager - [jorgebucaran/fisher](https://github.com/jorgebucaran/fisher)
 
 - [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide)
 - [charmbracelet/glow](https://github.com/charmbracelet/glow)
-- [ranger/ranger](https://github.com/ranger/ranger)
 - [jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
-- [sharkdp/bat](https://github.com/sharkdp/bat)
+- [eza-community/eza](https://github.com/eza-community/eza)
